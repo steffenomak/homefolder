@@ -59,3 +59,5 @@ PS2=${i_3}' '
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWSTASHSTATE=true
+
+zstyle ":completion:*:commands" rehash 1
