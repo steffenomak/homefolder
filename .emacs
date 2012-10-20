@@ -80,3 +80,6 @@
 (require 'whitespace)
 (setq whitespace-style '(face empty lines-tail trailing))
 (global-whitespace-mode t)
+
+(add-hook 'c++-mode-hook (lambda () (subword-mode 1)))
+(add-hook 'c-mode-hook (lambda () (subword-mode 1)))
