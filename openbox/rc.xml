@@ -331,7 +331,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>uxterm</command>
+        <command>uxterm -e tmux</command>
       </action>
     </keybind>
   </keyboard>
