@@ -1,7 +1,7 @@
 xterm*geometry:           80x30
-!xterm*faceName:           DroidSansMono:pixelsize=13:style=Regular
-xterm*faceName:           Terminus:pixelsize=16
-!xterm*faceName:           Monospace:bold:pixelsize=12
+xterm*faceName:           DroidSansMono:pixelsize=13:style=Regular
+!xterm*faceName:           Terminus:pixelsize=16
+!xterm*faceName:           Monospace:pixelsize=12
 !xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*dynamicColors:      true
 xterm*utf8:               2
