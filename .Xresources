@@ -1,4 +1,4 @@
-xterm*geometry:           80x30
+xterm*geometry:           81x30
 xterm*faceName:           DroidSansMono:pixelsize=13:style=Regular
 !xterm*faceName:           Terminus:pixelsize=16
 !xterm*faceName:           Monospace:pixelsize=12
