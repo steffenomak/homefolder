@@ -83,3 +83,4 @@
 
 (add-hook 'c++-mode-hook (lambda () (subword-mode 1)))
 (add-hook 'c-mode-hook (lambda () (subword-mode 1)))
+(setq-default truncate-lines t)
