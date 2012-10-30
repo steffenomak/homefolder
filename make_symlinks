@@ -19,6 +19,7 @@ if tmp == '' or tmp == 'Y' or tmp == 'y':
     os.link(work_dir + '/.muttrc', '.muttrc')
     os.link(work_dir + '/.Xresources', '.Xresources')
     os.link(work_dir + '/.zshrc', '.zshrc')
+    os.link(work_dir + '/.conkyrc', '.conkyrc')
     os.symlink(work_dir + '/.i3', '.i3')
     print('Created all symlinks.')
 else:
