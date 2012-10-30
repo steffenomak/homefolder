@@ -21,6 +21,7 @@ alias pacs='pacman-color -Ss'
 alias pacui='sudo pacman-color -Rd'
 alias greps='grep -inIEr --color=ALWAYS'
 alias pacman='pacman-color'
+alias mc='mc -S ompa'
 
 alias pm-suspend='sudo pm-suspend'
 
