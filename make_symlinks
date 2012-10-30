@@ -1,0 +1,25 @@
+#!/usr/bin/python3
+# -*-python-*-
+
+import os
+import sys
+
+work_dir = os.getcwd()
+home_folder = os.getenv("HOME")
+
+print('Dir with the stuff to link with: ... ' + work_dir)
+print('Home folder location: .............. ' + home_folder + '\n')
+
+tmp = input('Are this correct locations [Y/n]? ')
+if tmp == '' or tmp == 'Y' or tmp == 'y':
+    os.chdir(home_folder)
+    print('Changed working dir to: ' + home_folder)
+    os.link(work_dir + '/.emacs', '.emacs')
+    os.link(work_dir + '/.bashrc', '.bashrc')
+    os.link(work_dir + '/.muttrc', '.muttrc')
+    os.link(work_dir + '/.Xresources', '.Xresources')
+    os.link(work_dir + '/.zshrc', '.zshrc')
+    os.symlink(work_dir + '/.i3', '.i3')
+    print('Created all symlinks.')
+else:
+    print('Selected no.')
