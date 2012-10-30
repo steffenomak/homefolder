@@ -67,6 +67,6 @@ RAM:$mem/${memmax} ($memperc%) \
 ${if_up eth0}| \
 LAN: ${downspeed eth0} ${upspeed eth0} IP: ${addr eth0} \
 ${endif} | \
-DISK: $diskio_read $diskio_write | \
-DISK SPACE: / ${fs_free /}/${fs_size /} /home ${fs_free /home}/${fs_size /home} | \
+DISK: $diskio_read $diskio_write \
+SPACE: / ${fs_free /}/${fs_size /} /home ${fs_free /home}/${fs_size /home} | \
 ${time %a %y.%m.%d} ${time %H:%M:%S}
