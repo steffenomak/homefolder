@@ -151,4 +151,4 @@ focus_follows_mouse no
 
 exec --no-startup-id wicd-client --tray
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id nitrogen
+exec --no-startup-id kmix

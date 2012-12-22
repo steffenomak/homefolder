@@ -21,7 +21,7 @@ alias pacs='pacman-color -Ss'
 alias pacui='sudo pacman-color -Rd'
 alias greps='grep -inIEr --color=ALWAYS'
 alias pacman='pacman-color'
-alias mc='mc -S ompa'
+alias mc='mc -S /home/steffenomak/.local/share/mc/skins/ompa.ini'
 
 alias pm-suspend='sudo pm-suspend'
 
@@ -52,7 +52,7 @@ fi
 
 setopt PROMPT_SUBST
 
-source ~/.git-prompt.sh
+source /usr/share/git/git-prompt.sh
 
 PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(__git_ps1 " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}' '
 PS2=${i_3}' '
