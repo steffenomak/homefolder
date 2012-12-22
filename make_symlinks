@@ -33,7 +33,7 @@ if tmp == '' or tmp == 'Y' or tmp == 'y':
     make_link(work_dir + '/.Xresources', '.Xresources', False)
     make_link(work_dir + '/.zshrc', '.zshrc', False)
     make_link(work_dir + '/.conkyrc', '.conkyrc', False)
-    make_link(work_dir + '/.i3', '.i3', True)
+    make_link(work_dir + '/.i3', '.i3', False)
     print('Created all symlinks.')
 else:
     print('Selected no.')
