@@ -1,15 +1,26 @@
-xterm*geometry:           81x30
-!xterm*faceName:           DroidSansMono:pixelsize=13:style=Regular
-xterm*faceName:           Terminus:pixelsize=14
-!xterm*faceName:           Monospace:pixelsize=12
-!xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+xterm*vt100*geometry:           81x30
+xterm*faceName:           Monospace:size=11:style=Regular
+!xterm*faceName:            inconsolata:size=14
+xterm*font: fixed
+xterm*boldFont: fixed
+xterm*boldMode: false
+
+xterm*loginShell: true
+
+xterm*termName: xterm-256color
 xterm*dynamicColors:      true
 xterm*utf8:               2
 xterm*eightBitInput:      false
-xterm*saveLines:          512
+xterm*saveLines:          2000
 xterm*toolBar:            true
 
-*background: #111111
+!Xft.dpi: 98
+!Xft.hinting: 2
+!Xft.antialias: 2
+!Xft.hintstyle: hintfull
+!Xft.rgba: rgba
+
+*background: #222222
 *foreground: #babdb6
 ! Black (not tango) + DarkGrey
 *color0:  #000000

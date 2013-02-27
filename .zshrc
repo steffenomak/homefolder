@@ -30,11 +30,10 @@ export PATH=$PATH:/opt/mosml/bin:$HOME/scripts:/opt/google/talkplugin:/opt/andro
 export EDITOR="emacs -nw"
 
 export _humblebundle4key=tXqmP2KznG8k
-export R600_ENABLE_S3TC=1
 
 u_1='┌─'
-u_2='└──■'
-u_3='■──■'
+u_2='└──▅'
+u_3='▅──▅'
 
 r_1='┌─'
 r_2='└──>'
@@ -52,10 +51,13 @@ fi
 
 setopt PROMPT_SUBST
 
-source /usr/share/git/git-prompt.sh
+source ~/.git-prompt.sh
+source ~/.zsh/git-prompt/zshrc.sh
 
-PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(__git_ps1 " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}' '
-PS2=${i_3}' '
+#PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(__git_ps1 " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}''
+PS2=${i_3}''
+#PROMPT='$(git_super_status) %# '
+PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(git_super_status " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}' '
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -64,3 +66,4 @@ export GIT_PS1_SHOWSTASHSTATE=true
 zstyle ":completion:*:commands" rehash 1
 
 bindkey '^W' vi-backward-kill-word
+export PATH=/opt/qt5/bin:$PATH

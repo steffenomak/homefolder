@@ -5,14 +5,11 @@
 (global-set-key "\C-xc" 'compile)
 (global-set-key "\C-cl" 'goto-line)
 (global-set-key "\C-x\C-a" 'org-agenda)
+(global-auto-revert-mode t)
 
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-
-(setq erlang-root-dir "/usr/lib/erlang")
-(setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
-(require 'erlang-start)
 
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
 (add-to-list 'auto-mode-alist '("\\.vala$" . vala-mode))
@@ -34,11 +31,6 @@
 
 (setq auto-mode-alist (cons '(".lua$" . lua-mode) auto-mode-alist))
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
-
-;(defun my-c++-mode-hook ()
-;  (setq c-basic-offset 4)
-;  (c-set-offset 'substatement-open 0))
-;(add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 (setq-default tab-width 4) ; or any other preferred value
 (setq cua-auto-tabify-rectangles nil)
