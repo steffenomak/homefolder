@@ -14,7 +14,7 @@ compinit
 # End of lines added by compinstall
 
 alias ls='ls --color=auto'
-alias e='emacsclient'
+alias e='emacs'
 alias pac='sudo pacman-color -S'
 alias pacu='yaourt -Syua'
 alias pacs='pacman-color -Ss'
