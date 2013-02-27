@@ -5,17 +5,14 @@ import os
 import sys
 
 def make_link(f, t, symlink):
-    try:
-        if symlink:
-            os.link(f, t)
-        else:
-            os.symlink(f, t)
-
-    except OSError:
+    if os.path.exists(f):
         tmp = input(t + ' exists already, do you want to replace it? [Y/n]: ')
         if tmp == '' or tmp == 'Y' or tmp == 'y':
             os.remove(t)
-            make_link(f, t, symlink)
+    if symlink:
+        os.link(f, t)
+    else:
+        os.symlink(f, t)
 
 work_dir = os.getcwd()
 home_folder = os.getenv("HOME")
