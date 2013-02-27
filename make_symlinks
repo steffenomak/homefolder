@@ -9,6 +9,8 @@ def make_link(f, t, symlink):
         tmp = input(t + ' exists already, do you want to replace it? [Y/n]: ')
         if tmp == '' or tmp == 'Y' or tmp == 'y':
             os.remove(t)
+        else:
+            return
     if symlink:
         os.link(f, t)
     else:
