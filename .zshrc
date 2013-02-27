@@ -51,7 +51,6 @@ fi
 
 setopt PROMPT_SUBST
 
-source ~/.git-prompt.sh
 source ~/.zsh/git-prompt/zshrc.sh
 
 #PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(__git_ps1 " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}''
