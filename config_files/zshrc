@@ -26,6 +26,7 @@ alias mc='mc -S /home/steffenomak/.local/share/mc/skins/ompa.ini'
 alias pm-suspend='sudo pm-suspend'
 
 export PATH=$PATH:/opt/mosml/bin:$HOME/scripts:/opt/google/talkplugin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
+export PATH=$PATH:/home/steffenomak/local/bin
 
 export EDITOR="emacs -nw"
 
