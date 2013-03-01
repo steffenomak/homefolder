@@ -33,8 +33,8 @@ export EDITOR="emacs -nw"
 export _humblebundle4key=tXqmP2KznG8k
 
 u_1='┌─'
-u_2='└──▅'
-u_3='▅──▅'
+u_2='└──▬'
+u_3='▬──▬'
 
 r_1='┌─'
 r_2='└──>'
