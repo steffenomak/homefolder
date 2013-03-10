@@ -5,7 +5,9 @@ import os
 import sys
 
 def make_link(f, t):
-    if os.path.exists(home_folder + '/' + t):
+    t_p = home_folder + '/' + t
+
+    if os.path.islink(t_p) or os.path.exists(t_p):
         tmp = input(t + ' exists already, do you want to replace it? [Y/n]: ')
         if tmp == '' or tmp == 'Y' or tmp == 'y':
             os.remove(t)
