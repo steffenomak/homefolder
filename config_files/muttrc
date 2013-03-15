@@ -1,3 +1,4 @@
+# -*-conf-*-
 # A basic .muttrc for use with Gmail
 
 # Change the following six lines to match your Gmail account details
@@ -66,10 +67,6 @@ color index blue black "~N|~O"
 
 # color body brightwhite black '\*+[^*]+\*+'
 # color body brightwhite black '_+[^_]+_+'
-
-set alias_file=~/.mutt/aliases
-set sort_alias=alias
-source $alias_file
 
 subscribe vala-list@gnome.org
 subscribe wayland-devel@lists.freedesktop.org
