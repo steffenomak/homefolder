@@ -24,7 +24,7 @@ alias pm-suspend='sudo pm-suspend'
 
 export PATH=$PATH:/home/steffenomak/local/bin
 
-export EDITOR="e"
+export EDITOR='emacsclient -t -a ""'
 
 export _humblebundle4key=tXqmP2KznG8k
 
