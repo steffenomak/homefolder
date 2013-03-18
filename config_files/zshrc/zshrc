@@ -1,3 +1,4 @@
+# -*-conf-*-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -14,21 +15,16 @@ compinit
 # End of lines added by compinstall
 
 alias ls='ls --color=auto'
-alias e='emacs'
-alias pac='sudo pacman-color -S'
-alias pacu='yaourt -Syua'
-alias pacs='pacman-color -Ss'
-alias pacui='sudo pacman-color -Rd'
+alias e='emacsclient -t -a ""'
+alias em='emacsclient'
 alias greps='grep -inIEr --color=ALWAYS'
-alias pacman='pacman-color'
 alias mc='mc -S /home/steffenomak/.local/share/mc/skins/ompa.ini'
 
 alias pm-suspend='sudo pm-suspend'
 
-export PATH=$PATH:/opt/mosml/bin:$HOME/scripts:/opt/google/talkplugin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools
 export PATH=$PATH:/home/steffenomak/local/bin
 
-export EDITOR="emacs -nw"
+export EDITOR='emacsclient -t -a ""'
 
 export _humblebundle4key=tXqmP2KznG8k
 
@@ -54,10 +50,8 @@ setopt PROMPT_SUBST
 
 source ~/.zsh/git-prompt/zshrc.sh
 
-#PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(__git_ps1 " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}''
-PS2=${i_3}''
-#PROMPT='$(git_super_status) %# '
 PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(git_super_status " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}' '
+PS2=${i_3}''
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
@@ -66,4 +60,3 @@ export GIT_PS1_SHOWSTASHSTATE=true
 zstyle ":completion:*:commands" rehash 1
 
 bindkey '^W' vi-backward-kill-word
-export PATH=/opt/qt5/bin:$PATH

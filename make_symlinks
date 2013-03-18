@@ -4,17 +4,25 @@
 import os
 import sys
 
-def make_link(f, t):
-    if os.path.exists(home_folder + '/' + t):
-        tmp = input(t + ' exists already, do you want to replace it? [Y/n]: ')
-        if tmp == '' or tmp == 'Y' or tmp == 'y':
-            os.remove(t)
-            os.symlink(f, t)
-    else:
-        os.symlink(f, t)
+import parser
 
 work_dir = os.getcwd() + '/config_files'
 home_folder = os.getenv("HOME")
+
+def make_link(file_location, name, prefix):
+    tmp_loc = prefix + name
+    if os.path.islink(tmp_loc) or os.path.exists(tmp_loc):
+        tmp = input(prefix + name +
+                    ' exists already, do you want to replace it? [Y/n]: ')
+        if tmp == '' or tmp == 'Y' or tmp == 'y':
+            os.remove(prefix + name)
+    os.symlink(file_location + '/' + name, prefix + name)
+
+fil = open("test", "r")
+co = parser.conf_file(fil)
+print(co.prefix)
+print(co.location)
+fil.close()
 
 print('Dir with the stuff to link with: ... ' + work_dir)
 print('Home folder location: .............. ' + home_folder + '\n')
@@ -22,10 +30,14 @@ print('Home folder location: .............. ' + home_folder + '\n')
 tmp = input('Are this correct locations [Y/n]? ')
 
 if tmp == '' or tmp == 'Y' or tmp == 'y':
-    os.chdir(home_folder)
-    print('Changed working dir to: ' + home_folder)
     for f in os.listdir(work_dir):
-        make_link(work_dir + '/' + f, '.' + f)
+        os.chdir(work_dir)
+        os.chdir(f)
+        fil = open("conf.home", "r")
+        co = parser.conf_file(fil)
+        os.chdir(co.location)
+        print(work_dir + " " + f + " " + co.prefix + " " + co.location)
+        make_link(work_dir + '/' + f, f, co.prefix)
 
     print('Created all symlinks.')
 else:
