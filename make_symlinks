@@ -18,12 +18,6 @@ def make_link(file_location, name, prefix):
             os.remove(prefix + name)
     os.symlink(file_location + '/' + name, prefix + name)
 
-fil = open("test", "r")
-co = parser.conf_file(fil)
-print(co.prefix)
-print(co.location)
-fil.close()
-
 print('Dir with the stuff to link with: ... ' + work_dir)
 print('Home folder location: .............. ' + home_folder + '\n')
 
