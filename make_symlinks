@@ -16,6 +16,8 @@ def make_link(file_location, name, prefix):
                     ' exists already, do you want to replace it? [Y/n]: ')
         if tmp == '' or tmp == 'Y' or tmp == 'y':
             os.remove(prefix + name)
+        else:
+            return
     os.symlink(file_location + '/' + name, prefix + name)
 
 print('Dir with the stuff to link with: ... ' + work_dir)
