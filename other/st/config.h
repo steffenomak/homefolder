@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char font[] = "Monospace:pixelsize=12:antialias=false:autohint=false";
+static char font[] = "inconsolata:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 static char shell[] = "/bin/zsh";
 
