@@ -1,3 +1,4 @@
+; -*-lisp-*-
 (global-auto-revert-mode t)
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
@@ -77,3 +78,14 @@
 (add-hook 'c++-mode-hook (lambda () (subword-mode 1)))
 (add-hook 'c-mode-hook (lambda () (subword-mode 1)))
 (setq-default truncate-lines t)
+
+(set-default-font "Consolas:pixelsize=14:foundry=microsoft:weight=normal:slant=normal:width=normal:spacing=100:scalable=true")
+
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+(package-initialize)
+;(load-theme 'zenburn t)
+(if window-system (load-theme 'zenburn t) nil)
+(put 'dired-find-alternate-file 'disabled nil)
