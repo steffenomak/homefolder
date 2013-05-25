@@ -1,48 +1,78 @@
-xterm*vt100*geometry:           81x30
-xterm*faceName:           Monospace:size=11:style=Regular
-!xterm*faceName:            inconsolata:size=14
-xterm*font: fixed
-xterm*boldFont: fixed
-xterm*boldMode: false
+! To save run xrdb -all ~/.Xresources
 
-xterm*loginShell: true
+! === X f t ==================================================================
 
-xterm*termName: xterm-256color
-xterm*dynamicColors:      true
-xterm*utf8:               2
-xterm*eightBitInput:      false
-xterm*saveLines:          2000
-xterm*toolBar:            true
+Xft.antialias:          1
+Xft.autohint:           0
+Xft.dpi:                72
+Xft.hinting:            1
+Xft.hintstyle:          hintfull
+Xft.lcdfilter:          lcddefault
+Xft.rgba:               rgb
 
-!Xft.dpi: 98
-!Xft.hinting: 2
-!Xft.antialias: 2
-!Xft.hintstyle: hintfull
-!Xft.rgba: rgba
+! === U R x v t ==============================================================
 
-*background: #222222
-*foreground: #babdb6
-! Black (not tango) + DarkGrey
-*color0:  #000000
-*color8:  #555753
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #ff8d8d
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #c8e7a8
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
-! DarkBlue + Blue
-*color4:  #3070cd
-*color12: #4a90ea
-! DarkMangenta + Mangenta
-*color5:  #ce5c00
-*color13: #f57900
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
+URxvt.cursorBlink:      true
+URxvt.depth:            32
+URxvt.font:             xft:Consolas:pixelsize=14:antialias=true:autohinting=true
+URxvt.inheritPixmap:    false
+URxvt.internalBorder:   4
+URxvt.loginShell:       true
+URxvt.mapAlert:         true
+URxvt.pointerBlank:     true
+URxvt.resource:         value
+URxvt.termName:         xterm
+URxvt.transparent:      true
+URxvt.urgentOnBell:     true
+URxvt.iconFile: /usr/share/icons/Mint-X/apps/scalable/terminal.svg
+
+! === Appearance =============================================================
+
+!! simple_rainbow
+*background:  #575757
+*foreground:  #dcdccc
+
+!black
+*color0:      #666666
+*color8:      #888888
+!red
+*color1:      #ff8278
+*color9:      #ff8278
+!green
+*color2:      #bde077
+*color10:     #bde077
+!yellow
+*color3:      #eadc84
+*color11:     #eadc84
+!blue
+*color4:      #77bee0
+*color12:     #77bee0
+!magenta
+*color5:      #dd91f3
+*color13:     #dd91f3
+!cyan
+*color6:      #ffc178
+*color14:     #ffc178
+!white
+*color7:      #dddddd
+*color15:     #cccccc
+
+! === Scrolling ==============================================================
+
+URxvt.buffered:             true
+URxvt.jumpScroll:           false
+URxvt.saveLines:            1000
+URxvt.scrollBar:            false
+URxvt.scrollTtyKeypress:    true
+URxvt.scrollTtyOutput:      false
+URxvt.scrollWithBuffer:     false
+URxvt.scrollstyle:          plain
+URxvt.secondaryScroll:      false
+
+! === Link opening ===========================================================
+
+URxvt.perl-ext:             default,matcher
+URxvt.cutchars:             `"()'*<>[]{|}"
+URxvt.matcher.pattern.1:    \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          luakit

@@ -14,6 +14,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export PATH='/home/steffenomak/sat/bin:'$PATH
+
 alias ls='ls --color=auto'
 alias e='emacsclient -t -a ""'
 alias em='emacsclient'
