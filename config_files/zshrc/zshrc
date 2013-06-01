@@ -14,11 +14,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export PATH='/home/steffenomak/sat/bin:'$PATH
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
 alias ls='ls --color=auto'
 alias e='emacsclient -t -a ""'
 alias em='emacsclient'
 alias greps='grep -inIEr --color=ALWAYS'
-alias mc='mc -S /home/steffenomak/.mc-theme.ini'
+alias mc='mc -S $HOME/.mc-theme.ini'
 
 export EDITOR='emacsclient -t -a ""'
 export PATH='/home/steffenomak/bin:'$PATH
