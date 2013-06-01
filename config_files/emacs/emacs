@@ -87,5 +87,12 @@
 
 (package-initialize)
 ;(load-theme 'zenburn t)
-(if window-system (load-theme 'zenburn t) nil)
+;(if window-system (load-theme 'zenburn t) nil)
 (put 'dired-find-alternate-file 'disabled nil)
+
+(setq buffer-file-coding-system 'utf-8-unix)
+(setq default-file-name-coding-system 'utf-8-unix)
+(setq default-keyboard-coding-system 'utf-8-unix)
+(setq default-process-coding-system '(utf-8-unix . utf-8-unix))
+(setq default-sendmail-coding-system 'utf-8-unix)
+(setq default-terminal-coding-system 'utf-8-unix)
