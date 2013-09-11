@@ -8,7 +8,7 @@ set from = "steffenomak@gmail.com"
 set realname = "Stefan Risberg"
 
 # Change the following line to a different editor you prefer.
-set editor = "emacs"
+set editor = "vim"
 
 # Basic config, you can leave this as is
 set folder = "imaps://imap.gmail.com:993"
@@ -38,15 +38,6 @@ bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
 
-# Gmail-style keyboard shortcuts
-macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
-macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"\n <delete-message>" "Gmail delete message"
-macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index,pager gs "<change-folder>=INBOX/Skola<enter>" "Go to school"
-macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
-#macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
-macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"# -*-muttrc-*-
-
 # Palette for use with the Linux console.  Black background.
 
 color hdrdefault blue black
@@ -73,3 +64,5 @@ subscribe wayland-devel@lists.freedesktop.org
 
 set followup_to
 set honor_followup_to=yes
+
+set mailcap_path = ~/.mutt/mailcap
