@@ -1,0 +1,18 @@
+set clipboard=unnamed
+syntax enable
+
+set background=dark
+colorscheme solarized
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+set guifont:Dina:h10
+set number
+set nowrap
+set lines=30 columns=84
