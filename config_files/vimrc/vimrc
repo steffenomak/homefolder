@@ -20,3 +20,18 @@ set lines=30 columns=84
 execute pathogen#infect()
 filetype plugin indent on
 
+nmap <F8> :TagbarToggle<CR>
+
+let g:tagbar_type_rust = {
+            \ 'ctagstype' : 'rust',
+            \ 'kinds' : [
+            \ 'f:function',
+            \ 'T:types',
+            \ 'm:types',
+            \ 'm:modules',
+            \ 'm:consts',
+            \ 'm:traits',
+            \ 'm:impls',
+            \ 'M:macros'
+            \ ]
+            \ }
