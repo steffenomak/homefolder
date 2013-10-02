@@ -81,8 +81,8 @@ local layouts =
    -- {{{ Tags
    -- Define a tag table which hold all screen tags.
    tags = {
-	  names = {"main", "www", "dev", "skype", "art", 6, 7, 8, 9},
-	  layout = {layouts[1], layouts[2], layouts[2], layouts[1], layouts[1],
+	  names = {"1 main", "2 www", "3 dev", "4 mail", "5 skype", "6 art", 7, 8, 9},
+	  layout = {layouts[1], layouts[2], layouts[2], layouts[2], layouts[1],
 				layouts[1], layouts[1], layouts[1], layouts[1]}
    }
 
@@ -282,6 +282,7 @@ local layouts =
 
 	  -- Standard program
 	  awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
+	  awful.key({ modkey,           }, "d", function () awful.util.spawn("slimlock") end),
 	  awful.key({ modkey, "Control" }, "r", awesome.restart),
 	  awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
@@ -391,6 +392,8 @@ local layouts =
 		properties = { floating = true } },
 	  { rule = { class = "gimp" },
 		properties = { floating = true } },
+        { rule = { class = "chromium" },
+        properites = { tag = tags[1][2] } },
 	  -- Set Firefox to always map on tags number 2 of screen 1.
 	  -- { rule = { class = "Firefox" },
 	  --   properties = { tag = tags[1][2] } },
