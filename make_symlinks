@@ -32,7 +32,6 @@ if tmp == '' or tmp == 'Y' or tmp == 'y':
         fil = open("conf.home", "r")
         co = parser.conf_file(fil)
         os.chdir(co.location)
-        print(work_dir + " " + f + " " + co.prefix + " " + co.location)
         make_link(work_dir + '/' + f, f, co.prefix)
 
     print('Created all symlinks.')
