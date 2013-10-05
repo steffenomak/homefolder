@@ -14,6 +14,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export RUST_PATH=$RUST_PATH:"$HOME/rust"
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
