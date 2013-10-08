@@ -26,7 +26,7 @@ URxvt.resource:         value
 URxvt.transparent:      true
 URxvt.urgentOnBell:     true
 URxvt*iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
-
+URxvt.fading:               0
 ! === Appearance =============================================================
 
 #define S_yellow        #b58900
