@@ -12,21 +12,30 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
-do
-    local cmds = 
-    {
-        "udiskie",
-        "nm-applet",
-        "nitrogen --restore",
-        "puseaudio --start",
-        "pnmixer",
-        "setxkbmap se"
-    }
+function run_once(prg,arg_string,pname,screen)
+    if not prg then
+        do return nil end
+    end
 
-    for _, i in pairs(cmds) do
-        awful.util.spawn(i)
+    if not pname then
+        pname = prg
+    end
+
+    if not arg_string then 
+        awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. "' || (" .. prg .. ")",screen)
+    else
+        awful.util.spawn_with_shell("pgrep -f -u $USER -x '" .. pname .. " ".. arg_string .."' || (" .. prg .. " " .. arg_string .. ")",screen)
     end
 end
+
+awful.util.spawn("xrdb .Xresource")
+awful.util.spawn("pulseaudio --start")
+awful.util.spawn("nitrogen --restore")
+awful.util.spawn("setckbmap se")
+run_once("udiskie")
+run_once("nm-applet")
+run_once("pnmixer")
+run_once("dropboxd")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -55,7 +64,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
+beautiful.init("/home/steffenomak/.config/awesome/themes/solarized.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -138,9 +147,6 @@ local layouts =
    vicious.register(cputempwidget, vicious.widgets.thermal, " $1°C | ", 20,
 					{ "coretemp.0", "core" })
 
-   batwidget = wibox.widget.textbox()
-   vicious.register(batwidget, vicious.widgets.bat, "$1 $2 $3 | ", 20, "BAT0")
-
    -- Create a textclock widget
    mytextclock = awful.widget.textclock()
    -- Create a wibox for each screen and add it
@@ -214,7 +220,6 @@ local layouts =
 	  -- Widgets that are aligned to the left
 	  local left_layout = wibox.layout.fixed.horizontal()
 	  left_layout:add(mylauncher)
-	  left_layout:add(batwidget)
 	  left_layout:add(cputempwidget)
 	  left_layout:add(memwidget)
 	  left_layout:add(mytaglist[s])
