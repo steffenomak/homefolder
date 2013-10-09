@@ -12,6 +12,22 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
+do
+    local cmds = 
+    {
+        "udiskie",
+        "nm-applet",
+        "nitrogen --restore",
+        "puseaudio --start",
+        "pnmixer",
+        "setxkbmap se"
+    }
+
+    for _, i in pairs(cmds) do
+        awful.util.spawn(i)
+    end
+end
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -175,25 +191,6 @@ local layouts =
 					  if client.focus then client.focus:raise() end
 						   end))
 
-   -- Keyboard map indicator and changer
-   kbdcfg = {}
-   kbdcfg.cmd = "setxkbmap"
-   kbdcfg.layout = { { "us", "" }, { "se", "" } }
-   kbdcfg.current = 1  -- us is our default layout
-   kbdcfg.widget = wibox.widget.textbox()
-   kbdcfg.widget:set_text(" " .. kbdcfg.layout[kbdcfg.current][1] .. " ")
-   kbdcfg.switch = function ()
-	  kbdcfg.current = kbdcfg.current % #(kbdcfg.layout) + 1
-	  local t = kbdcfg.layout[kbdcfg.current]
-	  kbdcfg.widget:set_text(" " .. t[1] .. " ")
-	  os.execute( kbdcfg.cmd .. " " .. t[1] .. " " .. t[2] )
-   end
-
-   -- Mouse bindings
-   kbdcfg.widget:buttons(
-	  awful.util.table.join(awful.button({ }, 1, function () kbdcfg.switch() end))
-						)
-
    for s = 1, screen.count() do
 	  -- Create a promptbox for each screen
 	  mypromptbox[s] = awful.widget.prompt()
@@ -228,7 +225,6 @@ local layouts =
 	  if s == 1 then right_layout:add(wibox.widget.systray()) end
 	  right_layout:add(mytextclock)
 	  right_layout:add(mylayoutbox[s])
-	  right_layout:add(kbdcfg.widget)
 
 	  -- Now bring it all together (with the tasklist in the middle)
 	  local layout = wibox.layout.align.horizontal()
