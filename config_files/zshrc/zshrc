@@ -14,6 +14,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+export PYTHONPATH="/usr/lib/python3.3/site-packages"
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 

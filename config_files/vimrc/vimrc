@@ -35,3 +35,7 @@ let g:tagbar_type_rust = {
             \ 'M:macros'
             \ ]
             \ }
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+

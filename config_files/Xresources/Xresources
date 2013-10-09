@@ -14,8 +14,8 @@ Xft.rgba:               rgb
 
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-URxvt.font:             xft:Dina:pixelsize=12:antialias=false:autohinting=true
-URxvt.boldFont:         xft:Dina:pixelsize=12:antialias=false:autohinting=true
+URxvt.font:             xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
+URxvt.boldFont:         xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
 URxvt.inheritPixmap:    false
 URxvt.internalBorder:   4
 URxvt.loginShell:       true

@@ -15,7 +15,6 @@ local menubar = require("menubar")
 do
     local cmds = 
     {
-        "xrdb /home/steffenomak/.Xresource",
         "udiskie",
         "nm-applet",
         "nitrogen --restore",
