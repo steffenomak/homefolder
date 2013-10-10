@@ -64,7 +64,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/steffenomak/.config/awesome/themes/solarized.lua")
+beautiful.init("/home/steffenomak/.config/awesome/theme/solarized.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
@@ -393,8 +393,6 @@ local layouts =
 		properties = { floating = true } },
 	  { rule = { class = "gimp" },
 		properties = { floating = true } },
-        { rule = { class = "chromium" },
-        properites = { tag = tags[1][2] } },
 	  -- Set Firefox to always map on tags number 2 of screen 1.
 	  -- { rule = { class = "Firefox" },
 	  --   properties = { tag = tags[1][2] } },
