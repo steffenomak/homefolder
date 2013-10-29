@@ -98,3 +98,4 @@
 (setq default-terminal-coding-system 'utf-8-unix)
 
 (set-face-bold-p 'bold nil)
+

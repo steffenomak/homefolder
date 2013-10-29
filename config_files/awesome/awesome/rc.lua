@@ -28,7 +28,7 @@ function run_once(prg,arg_string,pname,screen)
     end
 end
 
-awful.util.spawn("xrdb .Xresource")
+awful.util.spawn("xrdb .Xresources")
 awful.util.spawn("pulseaudio --start")
 awful.util.spawn("nitrogen --restore")
 awful.util.spawn("setckbmap se")
