@@ -104,6 +104,7 @@ function GetRustIndent(lnum)
 	let prevline = s:get_line_trimmed(prevnonblank(a:lnum - 1))
 	if prevline[len(prevline) - 1] == ","
 				\ && s:get_line_trimmed(a:lnum) !~ "^\\s*[\\[\\]{}]"
+                \ && prevline !~ "^\\s*fn\\s"
 		" Oh ho! The previous line ended in a comma! I bet cindent will try to
 		" take this too far... For now, let's use the previous line's indent
 		return GetRustIndent(a:lnum - 1)
