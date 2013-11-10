@@ -1,6 +1,12 @@
 set clipboard=unnamedplus
 syntax enable
 
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
 set background=dark
 colorscheme solarized
 set guioptions-=m
@@ -12,11 +18,18 @@ set shiftwidth=4
 set expandtab
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-set guifont:Dina:h10
 set number
 set nowrap
 
-execute pathogen#infect()
+Bundle 'gmarik/vundle'
+
+Bundle 'wting/rust.vim'
+Bundle 'vim-scripts/ag.vim'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'majutsushi/tagbar'
+Bundle 'scrooloose/nerdtree'
+
 filetype plugin indent on
 
 nmap <F8> :TagbarToggle<CR>
