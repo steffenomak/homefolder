@@ -30,6 +30,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
+Bundle 'junegunn/vim-easy-align'
 
 filetype plugin indent on
 
@@ -55,3 +56,5 @@ set ttimeoutlen=50
 set laststatus=2
 
 set cino+=(0
+
+nmap ,d :b#<bar>bd#<CR>

@@ -1,14 +1,12 @@
-use std::io::io_error;
+use std::io;
 use std::path::Path;
 use std::io::fs::lstat;
 
 pub fn check_if_exists(p: &Path) -> bool {
-    let mut b = true;
-    do io_error::cond.trap(|_|{b = false;}).inside {
-        lstat(p);
+    match io::result(|| lstat(p)) {
+        Ok(_) => true,
+        Err(_) => false,
     }
-
-    b
 }
 
 pub fn print_path(p: &Path) {
