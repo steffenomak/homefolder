@@ -20,7 +20,7 @@ fn parse_file(file: File) -> ~[Entry] {
 
         let mut str_list: ~[~str] = ~[];
 
-        for part in s.word_iter() {
+        for part in s.words() {
             str_list.push(part.into_owned());
         }
 

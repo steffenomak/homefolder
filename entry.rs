@@ -35,7 +35,7 @@ impl Entry {
     }
 
     fn check_path(path: ~str) -> Path {
-        let mut tmp: ~[&str] = path.split_iter('/').collect();
+        let mut tmp: ~[&str] = path.split_str("/").collect();
 
         let mut i = 0;
         let home_path = match os::homedir() {
