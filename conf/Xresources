@@ -6,7 +6,7 @@ Xft.antialias:          1
 Xft.autohint:           0
 Xft.dpi:                96
 Xft.hinting:            1
-Xft.hintstyle:          hintfull
+Xft.hintstyle:          hintslight
 Xft.lcdfilter:          lcddefault
 Xft.rgba:               rgb
 
@@ -14,10 +14,10 @@ Xft.rgba:               rgb
 
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-URxvt.font:             xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
-URxvt.boldFont:         xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
-!URxvt.font:             xft:DejaVu Sans Mono for Powerline:pixelsize=12:antialias=false:autohinting=true
-!URxvt.boldFont:         xft:DejaVu Sans Mono for Powerline:pixelsize=12:antialias=false:autohinting=true
+!URxvt.font:             xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
+!URxvt.boldFont:         xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
+URxvt.font:             xft:DejaVu Sans Mono for Powerline:pixelsize=11
+URxvt.boldFont:         xft:DejaVu Sans Mono for Powerline:pixelsize=11
 URxvt.inheritPixmap:    false
 URxvt.internalBorder:   0
 URxvt.loginShell:       true
@@ -113,4 +113,4 @@ URxvt.perl-ext:             default,matcher
 URxvt.cutchars:             `"()'*<>[]{|}"
 URxvt.matcher.pattern.1:    \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 URxvt.matcher.button:       1
-URxvt.urlLauncher:          luakit
+URxvt.url-launcher:          luakit
