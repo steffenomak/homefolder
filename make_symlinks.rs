@@ -48,8 +48,9 @@ fn main() {
 
     work_path.push("conf/config.conf");
 
-    if !utils::check_if_exists(&work_path) {
-        fail!("Config file missing.");
+    match (utils::check_if_exists(&work_path)) {
+        None => fail!("Config file missing"),
+        _ => (),
     }
 
     let file = File::open_mode(&work_path, Open, ReadWrite).unwrap();
