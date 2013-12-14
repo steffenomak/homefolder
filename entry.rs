@@ -58,13 +58,6 @@ impl Entry {
         p
     }
 
-    pub fn to_str(&self) -> ~str {
-        format!("File Name: {:s}, Link Name: {:s}, Path: {:s}, Dir: {:b}", 
-                self.file_name, self.path.filename_str().unwrap_or("fail"),
-                self.path.dirname_str().unwrap_or("fail"),
-                self.dir)
-    }
-
     pub fn link(&self, loc: &Path) {
         match (check_if_exists(&self.path)) {
             Some(f) => {
@@ -79,6 +72,7 @@ impl Entry {
                 };
 
                 let s = s.as_slice();
+
                 if s == "y\n" || s == "\n" || s == "Y\n" {
                     match (f) {
                         utils::Directory => rmdir_recursive(&self.path),

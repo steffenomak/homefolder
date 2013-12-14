@@ -23,6 +23,3 @@ pub fn check_if_exists(p: &Path) -> Option<Type> {
     }
 }
 
-pub fn print_path(p: &Path) {
-    println(p.as_str().unwrap_or("Fail"));
-}
