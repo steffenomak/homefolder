@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+    <menu id="xdg-menu" label="Applications" execute="cat /var/cache/xdg-menu/openbox/menu.xml"/>
+
+    <menu id="system-menu" label="System">
+        <item label="Apperance">
+            <action name="Execute">
+                <command>lxappearance</command>
+                <startupnotify><enabled>yes</enabled></startupnotify>
+            </action>
+        </item>
+        <item label="KDE Settings">
+            <action name="Execute">
+                <command>systemsettings</command>
+                <startupnotify><enabled>yes</enabled></startupnotify>
+            </action>
+        </item>
+    </menu>
+
+    <menu id="root-menu" label="Openbox 3">
+        <separator label="Applications" />
+        <menu id="xdg-menu"/>
+        <separator />
+        <menu id="system-menu"/>
+        <item label="Log Out">
+            <action name="Exit">
+                <prompt>yes</prompt>
+            </action>
+        </item>
+    </menu>
+</openbox_menu>

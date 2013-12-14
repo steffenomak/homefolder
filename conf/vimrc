@@ -24,6 +24,10 @@ set ttyfast
 set cursorline
 set nocompatible
 set nobackup
+set nowritebackup
+set ttimeoutlen=50
+set laststatus=2
+set cino+=(0
 
 Bundle 'gmarik/vundle'
 
@@ -56,9 +60,5 @@ let g:tagbar_type_rust = {
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-set ttimeoutlen=50
-set laststatus=2
-
-set cino+=(0
 
 nmap ,d :b#<bar>bd#<CR>

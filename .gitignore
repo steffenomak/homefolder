@@ -1,3 +1,6 @@
 *.swp
 make_symlinks
+ag.vim
+rust.vim
+snipmate.vim
 
