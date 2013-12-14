@@ -145,7 +145,10 @@ local layouts =
 
    cputempwidget = wibox.widget.textbox()
    vicious.register(cputempwidget, vicious.widgets.thermal, " $1°C | ", 20,
-					{ "coretemp.0", "core" })
+   { "coretemp.0", "core" })
+
+   batget = wibox.widget.textbox()
+   vicious.register(batget, vicious.widgets.bat, "$1 $3", 30, "BAT0")
 
    -- Create a textclock widget
    mytextclock = awful.widget.textclock()
@@ -220,6 +223,7 @@ local layouts =
 	  -- Widgets that are aligned to the left
 	  local left_layout = wibox.layout.fixed.horizontal()
 	  left_layout:add(mylauncher)
+      left_layout:add(batget)
 	  left_layout:add(cputempwidget)
 	  left_layout:add(memwidget)
 	  left_layout:add(mytaglist[s])
