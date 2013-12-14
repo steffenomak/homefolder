@@ -27,8 +27,10 @@ URxvt.resource:         value
 !URxvt.termName:         xterm
 URxvt.transparent:      true
 URxvt.urgentOnBell:     true
-URxvt*iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
+URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
 URxvt.fading:               0
+
+URxvt.perl-ext-common: default,tabbed
 ! === Appearance =============================================================
 
 #define S_yellow        #b58900
