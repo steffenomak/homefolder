@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
@@ -173,47 +172,46 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <keybind key="C-A-Left">
-      <action name="GoToDesktop"/>
-    </keybind>
-    <keybind key="C-A-Right">
-      <action name="GoToDesktop"/>
-    </keybind>
-    <keybind key="C-A-Up">
-      <action name="GoToDesktop"/>
-    </keybind>
-    <keybind key="C-A-Down">
-      <action name="GoToDesktop"/>
-    </keybind>
     <keybind key="S-A-Left">
-      <action name="SendToDesktop"/>
+      <action name="SendToDesktopLeft">
+        <wrap>no</wrap>
+      </action>
     </keybind>
     <keybind key="S-A-Right">
-      <action name="SendToDesktop"/>
+      <action name="SendToDesktopRight">
+        <wrap>no</wrap>
+      </action>
     </keybind>
     <keybind key="S-A-Up">
-      <action name="SendToDesktop"/>
+      <action name="SendToDesktopUp">
+        <wrap>no</wrap>
+      </action>
     </keybind>
     <keybind key="S-A-Down">
-      <action name="SendToDesktop"/>
+      <action name="SendToDesktopDown">
+        <wrap>no</wrap>
+      </action>
     </keybind>
     <keybind key="W-F1">
-      <action name="GoToDesktop"/>
+      <action name="Desktop"/>
     </keybind>
     <keybind key="W-F2">
-      <action name="GoToDesktop"/>
+      <action name="Desktop">
+        <desktop>2</desktop>
+      </action>
     </keybind>
     <keybind key="W-F3">
-      <action name="GoToDesktop"/>
+      <action name="Desktop">
+        <desktop>3</desktop>
+      </action>
     </keybind>
     <keybind key="W-F4">
-      <action name="GoToDesktop"/>
+      <action name="Desktop">
+        <desktop>4</desktop>
+      </action>
     </keybind>
     <keybind key="W-d">
       <action name="ToggleShowDesktop"/>
-    </keybind>
-    <keybind key="A-F4">
-      <action name="Close"/>
     </keybind>
     <keybind key="A-Escape">
       <action name="Lower"/>
@@ -237,18 +235,6 @@
         <desktop>yes</desktop>
       </action>
     </keybind>
-    <keybind key="W-S-Right">
-      <action name="DirectionalCycleWindows"/>
-    </keybind>
-    <keybind key="W-S-Left">
-      <action name="DirectionalCycleWindows"/>
-    </keybind>
-    <keybind key="W-S-Up">
-      <action name="DirectionalCycleWindows"/>
-    </keybind>
-    <keybind key="W-S-Down">
-      <action name="DirectionalCycleWindows"/>
-    </keybind>
     <keybind key="W-Return">
       <action name="Execute">
         <command>urxvt</command>
@@ -264,6 +250,26 @@
     </keybind>
     <keybind key="S-W-c">
       <action name="Close"/>
+    </keybind>
+    <keybind key="C-A-Right">
+      <action name="DesktopRight">
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-A-Left">
+      <action name="DesktopLeft">
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-A-Up">
+      <action name="DesktopUp">
+        <wrap>no</wrap>
+      </action>
+    </keybind>
+    <keybind key="C-A-Down">
+      <action name="DesktopDown">
+        <wrap>no</wrap>
+      </action>
     </keybind>
   </keyboard>
   <mouse>
