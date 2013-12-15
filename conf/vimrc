@@ -20,6 +20,9 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 set number
 set nowrap
+set ttyfast
+set cursorline
+set nocompatible
 set nobackup
 set nowritebackup
 set ttimeoutlen=50
