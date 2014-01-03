@@ -20,10 +20,11 @@ xrdb /home/steffenomak/.Xresource &
 compton &
 pulseaudio --start &
 nitrogen --restore &
-nm-applet &
 pnmixer &
 dropboxd &
 lxpolkit &
 xfce4-panel &
 docky &
 conky -c ~/.config/conky/conky.conf &
+skippy-xd --start-daemon &
+
