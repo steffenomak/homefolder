@@ -72,6 +72,30 @@ theme.menu_width  = "100"
 -- {{{ Taglist
 theme.taglist_squares_sel   = theme.default_themes_path.."/zenburn/taglist/squarefz.png"
 theme.taglist_squares_unsel = theme.default_themes_path.."/zenburn/taglist/squarez.png"
+
+theme.bat_000 = "~/.config/awesome/icons/000.png"
+theme.bat_020 = "~/.config/awesome/icons/020.png"
+theme.bat_040 = "~/.config/awesome/icons/040.png"
+theme.bat_060 = "~/.config/awesome/icons/060.png"
+theme.bat_080 = "~/.config/awesome/icons/080.png"
+theme.bat_100 = "~/.config/awesome/icons/100.png"
+theme.bat_000_c = "~/.config/awesome/icons/000-charging.png"
+theme.bat_020_c = "~/.config/awesome/icons/020-charging.png"
+theme.bat_040_c = "~/.config/awesome/icons/040-charging.png"
+theme.bat_060_c = "~/.config/awesome/icons/060-charging.png"
+theme.bat_080_c = "~/.config/awesome/icons/080-charging.png"
+theme.bat_100_c = "~/.config/awesome/icons/100-charging.png"
+
+theme.bat_missing = "~/.config/awesome/icons/missing.png"
+theme.bat_c = "~/.config/awesome/icons/charged.png"
+ 
+-- theme.bat_ = "~/.config/awesome/icons"
+-- theme.bat_ = "~/.config/awesome/icons"
+-- theme.bat_ = "~/.config/awesome/icons"
+-- theme.bat_ = "~/.config/awesome/icons"
+-- theme.bat_ = "~/.config/awesome/icons"
+-- theme.bat_ = "~/.config/awesome/icons"
+-- theme.bat_ = "~/.config/awesome/icons"
 --theme.taglist_squares_resize = "false"
 -- }}}
 

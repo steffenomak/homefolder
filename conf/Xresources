@@ -14,10 +14,10 @@ Xft.rgba:               rgb
 
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-!URxvt.font:             xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
-!URxvt.boldFont:         xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
-URxvt.font:             xft:DejaVu Sans Mono for Powerline:pixelsize=11
-URxvt.boldFont:         xft:DejaVu Sans Mono for Powerline:pixelsize=11
+URxvt.font:             xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
+URxvt.boldFont:         xft:Terminess Powerline:pixelsize=12:antialias=false:autohinting=true
+!URxvt.font:             xft:DejaVu Sans Mono for Powerline:pixelsize=11
+!URxvt.boldFont:         xft:DejaVu Sans Mono for Powerline:pixelsize=11
 URxvt.inheritPixmap:    false
 URxvt.internalBorder:   0
 URxvt.loginShell:       true
@@ -30,7 +30,10 @@ URxvt.urgentOnBell:     true
 URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
 URxvt.fading:               0
 
-URxvt.perl-ext-common: default,tabbed
+URxvt.perl-ext-common: default
+
+URxvt.background: [90]#002b36
+
 ! === Appearance =============================================================
 
 #define S_yellow        #b58900
