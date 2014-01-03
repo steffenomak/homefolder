@@ -14,15 +14,16 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-#export PYTHONPATH="/usr/lib/python3.3/site-packages"
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export DESKTOP_SESSION=gnome
 
 alias ls='ls --color=auto'
 alias mc='mc -S $HOME/.mc-theme.ini'
 alias pacu='sudo pacman -Syu'
 alias pacs='pacman -Ss'
 alias paci='sudo pacman -S'
+alias pac='pacman'
 
 export EDITOR='vim'
 

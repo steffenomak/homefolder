@@ -166,7 +166,7 @@ gauge = {
     caption_fg_colour=0xFFFFFF,    caption_fg_alpha=0.5,
 },
 {
-    name='downspeedf',           arg='enp10s0',                     max_value=100,
+    name='downspeedf',           arg='wlp18s0',                     max_value=100,
     x=70,                          y=680,
     graph_radius=54,
     graph_thickness=7,
@@ -187,7 +187,7 @@ gauge = {
     caption_fg_colour=0xFFFFFF,    caption_fg_alpha=0.5,
 },
 {
-    name='upspeedf',           arg='enp10s0',                     max_value=100,
+    name='upspeedf',           arg='wlp18s0',                     max_value=100,
     x=70,                          y=680,
     graph_radius=42,
     graph_thickness=7,
