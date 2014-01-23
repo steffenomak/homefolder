@@ -12,7 +12,7 @@ pub enum Type {
 pub fn check_if_exists(p: &Path) -> Option<Type> {
     match io::result(|| lstat(p)) {
         Ok(s) => {
-            match(s.kind) {
+            match s.kind {
                 io::TypeFile => Some(File),
                 io::TypeDirectory => Some(Directory),
                 io::TypeSymlink => Some(Symlink),

@@ -1,5 +1,5 @@
 use std::io::{File, Open, ReadWrite};
-use std::io::buffered::BufferedReader;
+use std::io::BufferedReader;
 use std::os;
 
 use entry::Entry;
@@ -22,8 +22,8 @@ fn parse_file(file: File) -> ~[Entry] {
         if str_list.len() != 0 {
             match Entry::new_from_array(str_list) {
                 Some(e) => entries.push(e),
-                None => println(format!("Error, nr in str_list: {:u}", 
-                                        str_list.len()))
+                None => println!("Error, nr in str_list: {:u}", 
+                                        str_list.len())
             }
         }
     }
@@ -36,7 +36,7 @@ fn main() {
 
     work_path.push("conf/config.conf");
 
-    match (utils::check_if_exists(&work_path)) {
+    match utils::check_if_exists(&work_path) {
         None => fail!("Config file missing"),
         _ => (),
     }

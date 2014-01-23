@@ -1,7 +1,7 @@
 use std::path::Path;
 use std::io::fs::{symlink, unlink, rmdir_recursive};
 use std::io::stdio::{stdin, flush};
-use std::io::buffered::BufferedReader;
+use std::io::BufferedReader;
 use std::os;
 
 use utils::check_if_exists;
@@ -59,12 +59,12 @@ impl Entry {
     }
 
     pub fn link(&self, loc: &Path) {
-        match (check_if_exists(&self.path)) {
+        match check_if_exists(&self.path) {
             Some(f) => {
                 let mut buff_read = BufferedReader::new(stdin());
 
-                print(format!("{:s} exists. Remove? [Y/n]: ", 
-                              self.path.as_str().unwrap()));
+                print!("{:s} exists. Remove? [Y/n]: ", 
+                       self.path.as_str().unwrap());
                 flush();
                 let s = match buff_read.read_line() {
                     Some(s) => s,
@@ -74,7 +74,7 @@ impl Entry {
                 let s = s.as_slice();
 
                 if s == "y\n" || s == "\n" || s == "Y\n" {
-                    match (f) {
+                    match f {
                         utils::Directory => rmdir_recursive(&self.path),
                         _ => unlink(&self.path),
                     }
