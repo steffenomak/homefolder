@@ -7,3 +7,6 @@
 [submodule "conf/vim/bundle/ag.vim"]
 	path = conf/vim/bundle/ag.vim
 	url = https://github.com/vim-scripts/ag.vim
+[submodule "conf/vim/bundle/glsl.vim"]
+	path = conf/vim/bundle/glsl.vim
+	url = https://github.com/vim-scripts/glsl.vim
