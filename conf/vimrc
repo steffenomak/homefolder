@@ -31,7 +31,7 @@ set cino+=(0
 
 Bundle 'gmarik/vundle'
 
-Bundle 'glsl.vim'
+Bundle 'vim-scripts/glsl.vim'
 Bundle 'wting/rust.vim'
 Bundle 'vim-scripts/ag.vim'
 Bundle 'bling/vim-airline'

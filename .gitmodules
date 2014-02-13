@@ -4,3 +4,6 @@
 [submodule "conf/vim/bundle/rust.vim"]
 	path = conf/vim/bundle/rust.vim
 	url = https://github.com/wting/rust.vim
+[submodule "conf/vim/bundle/ag.vim"]
+	path = conf/vim/bundle/ag.vim
+	url = https://github.com/vim-scripts/ag.vim
