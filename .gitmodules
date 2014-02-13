@@ -1,3 +1,6 @@
 [submodule "conf/vim/bundle/vindle"]
 	path = conf/vim/bundle/vindle
 	url = https://github.com/gmarik/vundle.git
+[submodule "conf/vim/bundle/rust.vim"]
+	path = conf/vim/bundle/rust.vim
+	url = https://github.com/wting/rust.vim
