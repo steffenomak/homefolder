@@ -40,6 +40,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'junegunn/vim-easy-align'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 

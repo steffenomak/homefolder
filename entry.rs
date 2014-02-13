@@ -67,22 +67,26 @@ impl Entry {
                        self.path.as_str().unwrap());
                 flush();
                 let s = match buff_read.read_line() {
-                    Some(s) => s,
-                    None => ~"n",
+                    Ok(s) => s,
+                    Err(_) => ~"n",
                 };
 
                 let s = s.as_slice();
 
                 if s == "y\n" || s == "\n" || s == "Y\n" {
-                    match f {
+                    let m = match f {
                         utils::Directory => rmdir_recursive(&self.path),
                         _ => unlink(&self.path),
-                    }
+                    };
 
                     symlink(loc, &self.path);
                 }
             },
-            None => symlink(loc, &self.path),
-        }
+            None => 
+            {
+                symlink(loc, &self.path);
+                ()
+            }
+        };
     }
 }

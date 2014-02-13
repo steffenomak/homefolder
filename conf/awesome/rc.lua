@@ -30,7 +30,7 @@ end
 
 awful.util.spawn("pulseaudio --start")
 awful.util.spawn("nitrogen --restore")
-awful.util.spawn("setckbmap se")
+awful.util.spawn("setxkbmap se")
 awful.util.spawn("compton")
 run_once("udiskie")
 run_once("nm-applet")
@@ -152,7 +152,7 @@ local layouts =
    bat_widget_tooltip = awful.tooltip({
        objects = {bat_widget},
        timer_function = function()
-           local bat = "BAT0"
+           local bat = "BAT1"
            local fh = io.open("/sys/class/power_supply/" ..bat.. "/capacity", "r")
 
            if fh == nil then
@@ -173,7 +173,7 @@ local layouts =
    t = timer({ timeout = 2 })
 
    t:connect_signal("timeout", function ()
-       local bat = "BAT0"
+       local bat = "BAT1"
        local fh = io.open("/sys/class/power_supply/" .. bat .. "/present", "r")
 
        if fh == nil then
