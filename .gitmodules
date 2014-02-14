@@ -1,6 +1,9 @@
 [submodule "conf/vim/bundle/vindle"]
 	path = conf/vim/bundle/vindle
 	url = https://github.com/gmarik/vundle.git
+[submodule "conf/vim/bundle/vundle"]
+	path = conf/vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
 [submodule "conf/vim/bundle/rust.vim"]
 	path = conf/vim/bundle/rust.vim
 	url = https://github.com/wting/rust.vim
@@ -10,3 +13,21 @@
 [submodule "conf/vim/bundle/glsl.vim"]
 	path = conf/vim/bundle/glsl.vim
 	url = https://github.com/vim-scripts/glsl.vim
+[submodule "conf/vim/bundle/vim-airline"]
+	path = conf/vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline.git
+[submodule "conf/vim/bundle/vim-fugitive"]
+	path = conf/vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "conf/vim/bundle/tagbar"]
+	path = conf/vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "conf/vim/bundle/nerdtree"]
+	path = conf/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "conf/vim/bundle/vim-easy-align"]
+	path = conf/vim/bundle/vim-easy-align
+	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "conf/vim/bundle/YouCompleteMe"]
+	path = conf/vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
