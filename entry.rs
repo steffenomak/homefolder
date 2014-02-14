@@ -1,6 +1,6 @@
 use std::path::Path;
 use std::io::fs::{symlink, unlink, rmdir_recursive};
-use std::io::stdio::{stdin, flush};
+use std::io::stdio::{stdin, flush, println};
 use std::io::BufferedReader;
 use std::os;
 
@@ -74,18 +74,27 @@ impl Entry {
                 let s = s.as_slice();
 
                 if s == "y\n" || s == "\n" || s == "Y\n" {
-                    let m = match f {
+                    let res = match f {
                         utils::Directory => rmdir_recursive(&self.path),
                         _ => unlink(&self.path),
                     };
 
-                    symlink(loc, &self.path);
+                    if res.is_err() {
+                        println(res.to_str());
+                    }
+
+                    let res = symlink(loc, &self.path);
+                    if res.is_err() {
+                        println(res.to_str());
+                    }
                 }
             },
             None => 
             {
-                symlink(loc, &self.path);
-                ()
+                let res = symlink(loc, &self.path);
+                if res.is_err() {
+                    println(res.to_str());
+                }
             }
         };
     }
