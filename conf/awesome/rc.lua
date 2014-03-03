@@ -152,7 +152,7 @@ local layouts =
    bat_widget_tooltip = awful.tooltip({
        objects = {bat_widget},
        timer_function = function()
-           local bat = "BAT1"
+           local bat = "BAT0"
            local fh = io.open("/sys/class/power_supply/" ..bat.. "/capacity", "r")
 
            if fh == nil then
@@ -173,7 +173,7 @@ local layouts =
    t = timer({ timeout = 2 })
 
    t:connect_signal("timeout", function ()
-       local bat = "BAT1"
+       local bat = "BAT0"
        local fh = io.open("/sys/class/power_supply/" .. bat .. "/present", "r")
 
        if fh == nil then
