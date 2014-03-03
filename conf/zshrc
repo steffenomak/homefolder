@@ -23,12 +23,20 @@ export MANPATH=$MANPATH:$DEVKITPSP/share/man
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export DESKTOP_SESSION=gnome
 
+function wname {
+    echo -en "\033]0;$1\007"
+}
+
+chpwd() {wname $PWD}
+precmd() {wname $PWD}
+
 alias ls='ls --color=auto'
 alias mc='mc -S $HOME/.mc-theme.ini'
 alias pacu='sudo pacman -Syu'
 alias pacs='pacman -Ss'
 alias paci='sudo pacman -S'
 alias pac='pacman'
+alias mutt='wname mutt; mutt'
 
 export EDITOR='vim'
 
@@ -64,3 +72,5 @@ export GIT_PS1_SHOWSTASHSTATE=true
 zstyle ":completion:*:commands" rehash 1
 
 bindkey '^W' vi-backward-kill-word
+
+
