@@ -15,6 +15,7 @@ compinit
 # End of lines added by compinstall
 
 export PATH='/home/steffenomak/sat/bin:'$PATH
+export PATH=~/.local/bin:$PATH
 export DEVKITPSP=/opt/pspsdk
 export PATH=$PATH:$DEVKITPSP/bin
 export MANPATH=$MANPATH:$DEVKITPSP/share/man
