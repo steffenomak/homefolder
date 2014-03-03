@@ -107,7 +107,7 @@ local layouts =
    -- Define a tag table which hold all screen tags.
    tags = {
 	  names = {"1", "2", "3", "4", "5", "6", 7, 8, 9},
-	  layout = {layouts[1], layouts[9], layouts[2], layouts[2], layouts[1],
+	  layout = {layouts[1], layouts[9], layouts[4], layouts[2], layouts[1],
 				layouts[1], layouts[1], layouts[1], layouts[1]}
    }
 
@@ -371,8 +371,8 @@ local layouts =
 	  awful.key({ modkey,           }, "w", function () mymainmenu:show() end),
 
 	  -- Layout manipulation
-	  awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end),
-	  awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end),
+	  awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx( -1)    end),
+	  awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx(  1)    end),
 	  awful.key({ modkey, "Control" }, "j", function () awful.screen.focus_relative( 1) end),
 	  awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end),
 	  awful.key({ modkey,           }, "u", awful.client.urgent.jumpto),
