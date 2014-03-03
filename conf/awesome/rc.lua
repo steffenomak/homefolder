@@ -106,8 +106,8 @@ local layouts =
    -- {{{ Tags
    -- Define a tag table which hold all screen tags.
    tags = {
-	  names = {"1 main", "2 www", "3 dev", "4 mail", "5 skype", "6 art", 7, 8, 9},
-	  layout = {layouts[1], layouts[2], layouts[2], layouts[2], layouts[1],
+	  names = {"1", "2", "3", "4", "5", "6", 7, 8, 9},
+	  layout = {layouts[1], layouts[9], layouts[2], layouts[2], layouts[1],
 				layouts[1], layouts[1], layouts[1], layouts[1]}
    }
 

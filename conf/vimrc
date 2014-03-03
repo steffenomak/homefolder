@@ -8,7 +8,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
@@ -38,7 +38,6 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
-Bundle 'msanders/snipmate.vim'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'Valloric/YouCompleteMe'
 

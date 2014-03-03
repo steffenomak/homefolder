@@ -31,3 +31,6 @@
 [submodule "conf/vim/bundle/YouCompleteMe"]
 	path = conf/vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "conf/vim/bundle/vim-bbye"]
+	path = conf/vim/bundle/vim-bbye
+	url = https://github.com/moll/vim-bbye.git
