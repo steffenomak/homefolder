@@ -35,6 +35,7 @@ set ttimeoutlen=50
 set laststatus=2
 set cino+=(0
 set cino+=:0
+set cino+=g0
 
 Bundle 'gmarik/vundle'
 
