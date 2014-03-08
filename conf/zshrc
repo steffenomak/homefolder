@@ -37,6 +37,8 @@ alias pacs='pacman -Ss'
 alias paci='sudo pacman -S'
 alias pac='pacman'
 alias mutt='wname mutt; mutt'
+alias transmission-remote-cli='wname transmission; transmission-remote-cli'
+alias todo='clear && gcalcli calm 1 && task'
 
 export EDITOR='vim'
 
