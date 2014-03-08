@@ -4,12 +4,17 @@ syntax enable
 set nocompatible
 filetype off
 
+filetype plugin indent on
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-colorscheme molokai
-let g:molokai_original = 0
+let g:solarized_termtrans=1
+let g:solarized_termscolors=256
+
+colorscheme solarized
 set background=dark
+
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
@@ -29,6 +34,7 @@ set nowritebackup
 set ttimeoutlen=50
 set laststatus=2
 set cino+=(0
+set cino+=:0
 
 Bundle 'gmarik/vundle'
 
@@ -42,8 +48,8 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'moll/vim-bbye'
+Bundle 'altercation/vim-colors-solarized'
 
-filetype plugin indent on
 
 nmap <F8> :TagbarToggle<CR>
 
