@@ -7,8 +7,9 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+colorscheme molokai
+let g:molokai_original = 0
 set background=dark
-colorscheme jellybeans
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
