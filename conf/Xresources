@@ -1,3 +1,5 @@
+#include "/home/steffenomak/.colors/current"
+
 URxvt.cursorBlink:      true
 URxvt.depth:            32
 URxvt.font:             xft:Droid Sans Mono for Powerline:pixelsize=11
@@ -8,7 +10,7 @@ URxvt.loginShell:       true
 URxvt.mapAlert:         true
 URxvt.pointerBlank:     true
 URxvt.resource:         value
-!URxvt.termName:         xterm
+!URxvt.termName:         rxvt-256color
 URxvt.transparent:      true
 URxvt.urgentOnBell:     true
 URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
@@ -16,36 +18,12 @@ URxvt.fading:               0
 
 URxvt.perl-ext-common: default
 
+URxvt.background:       [90]#002b36
+
 !URxvt.background: [90]#002b36
 
 ! === Appearance =============================================================
 
-*background: #151515
-*foreground: #888888
-! black
-*color0: #1C1C1C
-*color8: #404040
-! red
-*color1: #B85335
-*color9: #CF6A4C
-! green
-*color2: #799D6A
-*color10: #99AD6A
-! yellow
-*color3: #FFB964
-*color11: #FAD07A
-! blue
-*color4: #667899
-*color12: #8197BF
-! magenta
-*color5: #8787AF
-*color13: #C6B6EE
-! cyan
-*color6: #668799
-*color14: #8FBFDC
-! white
-*color7: #888888
-*color15: #E8E8D3
 
 ! === Scrolling ==============================================================
 

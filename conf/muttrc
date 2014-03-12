@@ -40,7 +40,7 @@ bind editor <space> noop
 
 # Palette for use with the Linux console.  Black background.
 
-color hdrdefault blue black
+color hdrdefault default default
 color quoted blue black
 color signature blue black
 color attachment red black
