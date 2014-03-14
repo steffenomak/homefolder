@@ -1,9 +1,10 @@
 #include "/home/steffenomak/.colors/current"
 
+URxvt.imLocale: en_US.UTF-8
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-URxvt.font:             xft:Terminess Powerline:pixelsize=12
-URxvt.boldFont:         xft:Terminess Powerline:pixelsize=12
+URxvt.font:             xft:Terminess Powerline:pixelsize=11
+URxvt.boldFont:         xft:Terminess Powerline:pixelsize=11
 URxvt.inheritPixmap:    false
 URxvt.internalBorder:   0
 URxvt.loginShell:       true
