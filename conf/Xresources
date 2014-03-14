@@ -20,8 +20,6 @@ URxvt.perl-ext-common: default
 
 URxvt.background:       [90]#002b36
 
-!URxvt.background: [90]#002b36
-
 ! === Appearance =============================================================
 
 
