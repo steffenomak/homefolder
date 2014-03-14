@@ -2,8 +2,8 @@
 
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-URxvt.font:             xft:Droid Sans Mono for Powerline:pixelsize=11
-URxvt.boldFont:         xft:Droid Sans Mono for Powerline:pixelsize=11
+URxvt.font:             xft:Terminess Powerline:pixelsize=12
+URxvt.boldFont:         xft:Terminess Powerline:pixelsize=12
 URxvt.inheritPixmap:    false
 URxvt.internalBorder:   0
 URxvt.loginShell:       true
