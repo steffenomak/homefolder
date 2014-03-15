@@ -4,10 +4,10 @@ syntax enable
 set nocompatible
 filetype off
 
-filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
+
 
 if &term=~'linux'
 else
@@ -53,6 +53,8 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'moll/vim-bbye'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
 
 nmap <F8> :TagbarToggle<CR>
@@ -75,3 +77,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 nmap ,d :Bdelete<CR>
+
+filetype plugin indent on
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

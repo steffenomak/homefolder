@@ -34,3 +34,9 @@
 [submodule "conf/vim/bundle/vim-colors-solarized"]
 	path = conf/vim/bundle/vim-colors-solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "conf/vim/bundle/ultisnips"]
+	path = conf/vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "conf/vim/bundle/vim-snippets"]
+	path = conf/vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
