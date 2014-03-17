@@ -4,16 +4,19 @@ syntax enable
 set nocompatible
 filetype off
 
-filetype plugin indent on
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-let g:solarized_termtrans=1
-let g:solarized_termscolors=256
 
-colorscheme solarized
-set background=dark
+if &term=~'linux'
+else
+    let g:solarized_termtrans=1
+    let g:solarized_termscolors=256
+
+    colorscheme solarized
+    set background=dark
+endif
 
 set guioptions-=m
 set guioptions-=T
@@ -50,10 +53,14 @@ Bundle 'junegunn/vim-easy-align'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'moll/vim-bbye'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
 
-
-nmap <F8> :TagbarToggle<CR>
-
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:tagbar_type_rust = {
             \ 'ctagstype' : 'rust',
             \ 'kinds' : [
@@ -68,7 +75,9 @@ let g:tagbar_type_rust = {
             \ ]
             \ }
 
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
+nmap <F8> :TagbarToggle<CR>
 nmap ,d :Bdelete<CR>
+nmap <F5> :make<CR>
+
+filetype plugin indent on
+

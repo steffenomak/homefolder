@@ -3,7 +3,7 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt autocd extendedglob HIST_IGNORE_DUPS
+setopt autocd extendedglob HIST_IGNORE_DUPS PROMPT_SUBST
 unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
@@ -16,6 +16,7 @@ compinit
 
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export PATH=~/.local/bin:$PATH
+export PATH=$PATH:~/.gem/ruby/2.1.0/bin
 export DEVKITPSP=/opt/pspsdk
 export PATH=$PATH:$DEVKITPSP/bin
 export MANPATH=$MANPATH:$DEVKITPSP/share/man
@@ -62,7 +63,7 @@ fi
 
 setopt PROMPT_SUBST
 
-source ~/.zsh/git-prompt/zshrc.sh
+source ~/.zsh/zsh-git-prompt/zshrc.sh
 
 PROMPT=${i_1}$'[\e[0;35m%n\e[0m@%m %c''$(git_super_status " (\e[1;33m%s\e[0m)")'$'] \e[0;35m$\e[0m\n'${i_2}' '
 PS2=${i_3}''
