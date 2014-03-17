@@ -16,6 +16,7 @@ compinit
 
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export PATH=~/.local/bin:$PATH
+export PATH=$PATH:~/.gem/ruby/2.1.0/bin
 export DEVKITPSP=/opt/pspsdk
 export PATH=$PATH:$DEVKITPSP/bin
 export MANPATH=$MANPATH:$DEVKITPSP/share/man
