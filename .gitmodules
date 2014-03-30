@@ -40,3 +40,9 @@
 [submodule "conf/vim/bundle/vim-snippets"]
 	path = conf/vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "conf/vim/bundle/vim-multiple-cursors"]
+	path = conf/vim/bundle/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "conf/vim/bundle/NrrwRgn"]
+	path = conf/vim/bundle/NrrwRgn
+	url = https://github.com/chrisbra/NrrwRgn.git
