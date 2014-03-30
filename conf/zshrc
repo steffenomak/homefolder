@@ -21,6 +21,10 @@ export PATH=$PATH:~/.gem/ruby/2.1.0/bin
 export DEVKITPSP=/opt/pspsdk
 export PATH=$PATH:$DEVKITPSP/bin
 export MANPATH=$MANPATH:$DEVKITPSP/share/man
+export PKG_CONFIG_PATH=~/.local/lib/pkgconfig:~/.local/share/pkgconfig
+export LD_LIBRARY_PATH=~/.local/lib
+export C_INCLUDE_PATH=~/.local/include
+export CPLUS_INCLUDE_PATH=~/.local/include
 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export DESKTOP_SESSION=gnome
@@ -112,6 +116,7 @@ alias pacs='pacman -Ss'
 alias paci='sudo pacman -S'
 alias pac='pacman'
 alias mutt='wname mutt; mutt'
+alias ranger='wname ranger; ranger'
 alias transmission-remote-cli='wname transmission; transmission-remote-cli'
 alias todo='clear && gcalcli calm 1 && task'
 
