@@ -15,6 +15,11 @@ fn parse_file(file: File) -> ~[Entry] {
     for l in buff_read.lines() {
         let mut str_list: ~[~str] = ~[];
 
+        let l = match l {
+            Ok(line) => line,
+            Err(_) => break,
+        };
+
         for part in l.words() {
             str_list.push(part.into_owned());
         }

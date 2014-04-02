@@ -55,6 +55,8 @@ Bundle 'moll/vim-bbye'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
+Bundle 'chrisbra/NrrwRgn'
+Bundle 'terryma/vim-multiple-cursors'
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
