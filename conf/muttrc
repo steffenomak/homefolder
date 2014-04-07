@@ -1,11 +1,14 @@
 # -*-conf-*-
 # A basic .muttrc for use with Gmail
 
+source "gpg2 -dq $HOME/.my-pwds.gpg |"
+
 # Change the following six lines to match your Gmail account details
 set imap_user = "steffenomak@gmail.com"
 set smtp_url = "smtp://steffenomak@smtp.gmail.com:587/"
 set from = "steffenomak@gmail.com"
 set realname = "Stefan Risberg"
+set imap_pass=$my_pw_personal
 
 # Change the following line to a different editor you prefer.
 set editor = "vim"
