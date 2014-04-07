@@ -9,6 +9,7 @@ set smtp_url = "smtp://steffenomak@smtp.gmail.com:587/"
 set from = "steffenomak@gmail.com"
 set realname = "Stefan Risberg"
 set imap_pass=$my_pw_personal
+set smtp_pass=$my_pw_personal
 
 # Change the following line to a different editor you prefer.
 set editor = "vim"
