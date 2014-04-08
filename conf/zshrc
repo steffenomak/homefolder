@@ -119,6 +119,7 @@ alias mutt='wname mutt; mutt'
 alias ranger='wname ranger; ranger'
 alias transmission-remote-cli='wname transmission; transmission-remote-cli'
 alias todo='clear && gcalcli calm 1 && task'
+alias vim='vim -p'
 
 export EDITOR='vim'
 

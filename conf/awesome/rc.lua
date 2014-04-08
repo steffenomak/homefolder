@@ -35,6 +35,7 @@ awful.util.spawn("compton")
 run_once("nm-applet")
 run_once("pnmixer")
 run_once("dropboxd")
+run_once("fs-batter")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -66,8 +67,8 @@ end
 beautiful.init("/home/steffenomak/.config/awesome/theme/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
-editor = os.getenv("EDITOR") or "nano"
+terminal = "termite"
+editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.
@@ -145,108 +146,6 @@ local layouts =
    cputempwidget = wibox.widget.textbox()
    vicious.register(cputempwidget, vicious.widgets.thermal, " $1°C | ", 20,
    { "coretemp.0", "core" })
-
-   bat_widget = wibox.widget.imagebox()
-   
-   bat_widget_tooltip = awful.tooltip({
-       objects = {bat_widget},
-       timer_function = function()
-           local bat = "BAT0"
-           local fh = io.open("/sys/class/power_supply/" ..bat.. "/capacity", "r")
-
-           if fh == nil then
-               return "N/A"
-           end
-
-           local ch = fh:read()
-           fh:close()
-
-           if ch == "120" then
-               return ("Battery is fully charged.")
-           end
-
-           return ("Battery charge level: "..ch.."%")
-       end,
-   })
-
-   t = timer({ timeout = 2 })
-
-   t:connect_signal("timeout", function ()
-       local bat = "BAT0"
-       local fh = io.open("/sys/class/power_supply/" .. bat .. "/present", "r")
-
-       if fh == nil then
-            bat_widget:set_image(beautiful.bat_missing)
-            return(nil)
-        end
-
-        local stat = fh:read()
-        fh:close()
-
-        if tonumber(stat) < 1 then
-            bat_widget:set_image(beautiful.bat_missing)
-            return(nil)
-        end
-
-        fh = io.open("/sys/class/power_supply/" .. bat .. "/status", "r")
-
-        if fh == nil then
-            bat_widget:set_image(beautiful.bat_missing)
-            return(nil)
-        end
-
-        stat = fh:read()
-        fh:close()
-
-        if stat == 'Full' then
-            bat_widget:set_image(beautiful.bat_c)
-            return(nil)
-        end
-
-        fh = io.open("/sys/class/power_supply/" .. bat .. "/capacity")
-        if fh == nil then
-            bat_widget:set_image(beautiful.bat_missing)
-            return(nil)
-        end
-
-        local ch = tonumber(fh:read())
-        fh:close()
-
-        if stat == 'Charging' then
-            if ch == 0 then
-                bat_widget:set_image(beautiful.bat_000_c)
-            elseif ch < 20 then
-                bat_widget:set_image(beautiful.bat_020_c)
-            elseif ch < 40 then
-                bat_widget:set_image(beautiful.bat_040_c)
-            elseif ch < 60 then
-                bat_widget:set_image(beautiful.bat_060_c)
-            elseif ch < 80 then
-                bat_widget:set_image(beautiful.bat_080_c)
-            else
-                bat_widget:set_image(beautiful.bat_100_c)
-            end
-        else
-            if ch == 0 then
-                bat_widget:set_image(beautiful.bat_000)
-            elseif ch < 20 then
-                bat_widget:set_image(beautiful.bat_020)
-            elseif ch < 40 then
-                bat_widget:set_image(beautiful.bat_040)
-            elseif ch < 60 then
-                bat_widget:set_image(beautiful.bat_060)
-            elseif ch < 80 then
-                bat_widget:set_image(beautiful.bat_080)
-            else
-                bat_widget:set_image(beautiful.bat_100)
-            end
-        end
-
-        return(nil)
-    end)
-
-    t:start()
-    t:emit_signal("timeout")
 
    -- Create a textclock widget
    mytextclock = awful.widget.textclock()
@@ -329,7 +228,6 @@ local layouts =
 	  -- Widgets that are aligned to the right
 	  local right_layout = wibox.layout.fixed.horizontal()
 	  if s == 1 then right_layout:add(wibox.widget.systray()) end
-      right_layout:add(bat_widget)
 	  right_layout:add(mytextclock)
 	  right_layout:add(mylayoutbox[s])
 

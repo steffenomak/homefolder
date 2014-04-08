@@ -39,13 +39,15 @@ set laststatus=2
 set cino+=(0
 set cino+=:0
 set cino+=g0
+set autoread
+set ruler
 
 Bundle 'gmarik/vundle'
 
 Bundle 'vim-scripts/glsl.vim'
 Bundle 'wting/rust.vim'
 Bundle 'vim-scripts/ag.vim'
-Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdtree'
@@ -58,6 +60,7 @@ Bundle 'honza/vim-snippets'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'terryma/vim-multiple-cursors'
 
+let $PYTHONPATH="/usr/lib/python3.4/site-packages"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -82,4 +85,6 @@ nmap ,d :Bdelete<CR>
 nmap <F5> :make<CR>
 
 filetype plugin indent on
+
+let g:ycm_autoclose_preview_window_after_completion = 1
 
