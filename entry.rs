@@ -8,9 +8,9 @@ use utils::check_if_exists;
 use utils;
 
 pub struct Entry {
-    file_name: ~str,
-    path: Path,
-    dir: bool
+    pub file_name: ~str,
+    pub path: Path,
+    pub dir: bool
 }
 
 impl Entry {
