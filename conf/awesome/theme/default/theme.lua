@@ -4,7 +4,7 @@
 
 theme = {}
 
-theme.font          = "Fira Sans 8"
+theme.font          = "Terminess Powerline 8"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#535d6c"
@@ -89,23 +89,15 @@ theme.layout_tiletop = "/usr/share/awesome/themes/default/layouts/tiletopw.png"
 theme.layout_spiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 
+theme.lain_icons = "/usr/share/awesome/lib/lain/icons/layout/default"
+theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
+theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
+theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
+theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
+
+theme.useless_gap_width = 10
+
 theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
-
-theme.bat_000 = "~/.config/awesome/icons/000.png"
-theme.bat_020 = "~/.config/awesome/icons/020.png"
-theme.bat_040 = "~/.config/awesome/icons/040.png"
-theme.bat_060 = "~/.config/awesome/icons/060.png"
-theme.bat_080 = "~/.config/awesome/icons/080.png"
-theme.bat_100 = "~/.config/awesome/icons/100.png"
-theme.bat_000_c = "~/.config/awesome/icons/000-charging.png"
-theme.bat_020_c = "~/.config/awesome/icons/020-charging.png"
-theme.bat_040_c = "~/.config/awesome/icons/040-charging.png"
-theme.bat_060_c = "~/.config/awesome/icons/060-charging.png"
-theme.bat_080_c = "~/.config/awesome/icons/080-charging.png"
-theme.bat_100_c = "~/.config/awesome/icons/100-charging.png"
-
-theme.bat_missing = "~/.config/awesome/icons/missing.png"
-theme.bat_c = "~/.config/awesome/icons/charged.png"
 
 -- Define the icon theme for application icons. If not set then the icons 
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.

@@ -7,28 +7,24 @@ use entry::Entry;
 mod utils;
 mod entry;
 
-fn parse_file(file: File) -> ~[Entry] {
-    let mut entries: ~[Entry] = ~[];
+fn parse_file(file: File) -> Vec<Entry> {
+    let mut entries: Vec<Entry> = Vec::new();
 
     let mut buff_read = BufferedReader::new(file);
 
     for l in buff_read.lines() {
-        let mut str_list: ~[~str] = ~[];
-
         let l = match l {
             Ok(line) => line,
             Err(_) => break,
         };
 
-        for part in l.words() {
-            str_list.push(part.into_owned());
-        }
+        let arr: ~[&str] = l.split_str(" ").collect();
 
-        if str_list.len() != 0 {
-            match Entry::new_from_array(str_list) {
+        if arr.len() != 0 {
+            match Entry::new_from_array(arr) {
                 Some(e) => entries.push(e),
-                None => println!("Error, nr in str_list: {:u}", 
-                                        str_list.len())
+                None => println!("Error, amount of elements wrong: {}", 
+                                 arr.len()),
             }
         }
     }

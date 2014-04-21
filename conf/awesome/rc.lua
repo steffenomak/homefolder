@@ -11,6 +11,7 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+local lain = require("lain")
 
 function run_once(prg,arg_string,pname,screen)
     if not prg then
@@ -91,9 +92,15 @@ local layouts =
    awful.layout.suit.spiral.dwindle,
    awful.layout.suit.max,
    awful.layout.suit.max.fullscreen,
-   awful.layout.suit.magnifier
+   awful.layout.suit.magnifier,
+   lain.layout.uselessfair,
+   lain.layout.uselesstile,
+   lain.layout.termfair,
    }
    -- }}}
+   
+   lain.layout.termfair.nmaster = 4
+   lain.layout.termfair.ncol = 1
 
    -- {{{ Wallpaper
    if beautiful.wallpaper then
@@ -107,7 +114,7 @@ local layouts =
    -- Define a tag table which hold all screen tags.
    tags = {
 	  names = {"1", "2", "3", "4", "5", "6", 7, 8, 9},
-	  layout = {layouts[1], layouts[9], layouts[4], layouts[2], layouts[1],
+	  layout = {layouts[1], layouts[9], layouts[13], layouts[13], layouts[14],
 				layouts[1], layouts[1], layouts[1], layouts[1]}
    }
 

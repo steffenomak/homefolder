@@ -3,8 +3,8 @@
 URxvt.imLocale: en_US.UTF-8
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-*.font:             xft:Dina-6
-*.boldFont:         xft:Dina-6
+*.font:             xft:Envy Code R-9
+*.boldFont:         xft:Envy Code R-9
 URxvt.inheritPixmap:    false
 URxvt.internalBorder:   0
 URxvt.loginShell:       true

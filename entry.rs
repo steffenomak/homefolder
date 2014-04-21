@@ -24,21 +24,20 @@ impl Entry {
         }
     }
 
-    pub fn new_from_array(arr: &[~str]) -> Option<Entry> {
+    pub fn new_from_array(arr: &[&str]) -> Option<Entry> {
         if arr.len() != 4 {
             return None
         }
-        let mut p = Entry::check_path(arr[2].clone());
-        let b = arr[3] == ~"true";
-        p.push(arr[1].clone());
+        let mut p = Entry::check_path(arr[2]);
+        let b = arr[3] == "true";
+        p.push(arr[1]);
 
-        Some(Entry::new(arr[0].clone(), p, b))
+        Some(Entry::new(arr[0].to_owned(), p, b))
     }
 
-    fn check_path(path: ~str) -> Path {
+    fn check_path(path: &str) -> Path {
         let mut tmp: ~[&str] = path.split_str("/").collect();
 
-        let mut i = 0;
         let home_path = match os::homedir() {
             Some(p) => p,
             None => Path::new("/root"),
@@ -46,11 +45,10 @@ impl Entry {
 
         let home_path = home_path.as_str().unwrap_or("fail");
 
-        while i < tmp.len() {
-            if tmp[i] == "$HOME_FOLDER$" {
-                tmp[i] = home_path;
+        for word in tmp.mut_iter() {
+            if *word == "$HOME_FOLDER$" {
+                *word = home_path;
             }
-            i += 1;
         }
 
         let mut p = Path::new("");
