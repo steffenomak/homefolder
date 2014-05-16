@@ -19,7 +19,6 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 set nowrap
 set ttyfast
-set cursorline
 set nocompatible
 set nobackup
 set nowritebackup
@@ -83,6 +82,6 @@ if &term=~'linux'
 else
     let g:solarized_termtrans=1
     set background=dark
-    colorscheme base16-railscasts
+    colorscheme base16-monokai
     hi Normal ctermbg=none
 endif
