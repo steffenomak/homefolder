@@ -82,20 +82,20 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
    {
-   awful.layout.suit.floating,
-   awful.layout.suit.tile,
-   awful.layout.suit.tile.left,
-   awful.layout.suit.tile.bottom,
-   awful.layout.suit.tile.top,
-   awful.layout.suit.fair,
-   awful.layout.suit.fair.horizontal,
-   awful.layout.suit.spiral.dwindle,
-   awful.layout.suit.max,
-   awful.layout.suit.max.fullscreen,
-   awful.layout.suit.magnifier,
-   lain.layout.uselessfair,
-   lain.layout.uselesstile,
-   lain.layout.termfair,
+   awful.layout.suit.floating,        -- 1
+   awful.layout.suit.tile,            -- 2
+   awful.layout.suit.tile.left,       -- 3
+   awful.layout.suit.tile.bottom,     -- 4
+   awful.layout.suit.tile.top,        -- 5
+   awful.layout.suit.fair,            -- 6
+   awful.layout.suit.fair.horizontal, -- 7
+   awful.layout.suit.spiral.dwindle,  -- 8
+   awful.layout.suit.max,             -- 9
+   awful.layout.suit.max.fullscreen,  -- 10
+   awful.layout.suit.magnifier,       -- 11
+   lain.layout.uselessfair,           -- 12
+   lain.layout.uselesstile,           -- 13
+   lain.layout.termfair,              -- 14
    }
    -- }}}
    
@@ -113,9 +113,18 @@ local layouts =
    -- {{{ Tags
    -- Define a tag table which hold all screen tags.
    tags = {
-	  names = {"1", "2", "3", "4", "5", "6", 7, 8, 9},
-	  layout = {layouts[1], layouts[9], layouts[13], layouts[13], layouts[14],
-				layouts[1], layouts[1], layouts[1], layouts[1]}
+       names = {
+           "1",         -- 1
+           "2",         -- 2
+           "3",         -- 3
+           "4"          -- 4
+       },
+       layout = {
+           layouts[14], -- 1
+           layouts[13], -- 2
+           layouts[9],  -- 3
+           layouts[1],  -- 4
+       },
    }
 
    for s = 1, screen.count() do
