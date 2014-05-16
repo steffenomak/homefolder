@@ -1,3 +1,5 @@
 *.swp
 make_symlinks
+conf/ranger/bookmarks
+conf/raner/history
 
