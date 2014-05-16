@@ -75,7 +75,7 @@ fi
 setopt PROMPT_SUBST
 
 
-PROMPT=${i_1}"[$fg[green]%n$reset_color@%m %c]
+PROMPT=${i_1}"[$fg[magenta]%n$reset_color@%m %c]
 ${i_2} "
 
 PS2=${i_3}' '
