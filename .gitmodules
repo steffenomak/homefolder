@@ -49,3 +49,6 @@
 [submodule "conf/vim/bundle/base16-vim"]
 	path = conf/vim/bundle/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
+[submodule "conf/base16-shell"]
+	path = conf/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git
