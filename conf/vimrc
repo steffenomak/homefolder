@@ -29,6 +29,7 @@ set cino+=:0
 set cino+=g0
 set autoread
 set ruler
+set cursorline
 
 Bundle 'gmarik/vundle'
 
