@@ -15,6 +15,7 @@ local beautiful = require("beautiful")
 local naughty   = require("naughty")
 local drop      = require("scratchdrop")
 local lain      = require("lain")
+local vicious   = require("vicious")
 -- }}}
 
 -- {{{ Error handling
@@ -152,6 +153,19 @@ memicondark = wibox.widget.background(memicon, "#1A1A1A")
 memiconlight = wibox.widget.background(memicon, "#313131")
 
 -- MEM RAM
+membar = awful.widget.progressbar()
+membar:set_color("#A6E22E")
+membar:set_width(55)
+membar:set_ticks(true)
+membar:set_ticks_size(6)
+membar:set_background_color(beautiful.bg_normal)
+memmargins = wibox.layout.margin(membar, 2, 7)
+memmargins:set_top(6)
+memmargins:set_bottom(6)
+
+vicious.register(membar, vicious.widgets.mem, "$1", 5)
+membarbg = wibox.widget.background(memmargins, beautiful.bg_focus)
+
 memwidget = lain.widgets.mem({
     settings = function()
         widget:set_text(" " .. mem_now.used .. "MB ")
@@ -342,6 +356,7 @@ for s = 1, screen.count() do
 
     right_layout:add(arrl_ld)
     right_layout:add(memiconlight)
+    right_layout:add(membarbg)
     right_layout:add(memwidgetbg)
 
     right_layout:add(arrl_dl)
