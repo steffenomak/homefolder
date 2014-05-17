@@ -52,8 +52,8 @@ end
 run_once("dropboxd")
 run_once("skype")
 run_once("compton")
-awful.utils.spawn("pulseaudio --start")
-awful.utils.spawn("setxkbmap se")
+awful.util.spawn("pulseaudio --start")
+awful.util.spawn("setxkbmap se")
 -- }}}
 
 -- {{{ Variable definitions
@@ -78,8 +78,8 @@ browser    = "firefox"
 browser2   = "iron"
 gui_editor = "gvim"
 graphics   = "gimp"
-mail       = terminal .. " -e mutt "
-iptraf     = terminal .. " -g 180x54-20+34 -e sudo iptraf-ng -i all "
+mail       = terminal .. " -e /bin/zsh -i -c \"mutt\" "
+iptraf     = terminal .. " -g 180x54-20+34 -e /bin/zsh -i -c \"sudo iptraf-ng -i all\" "
 musicplr   = terminal .. " -g 130x34-320+16 -e ncmpcpp "
 
 local layouts = {
