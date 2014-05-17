@@ -76,7 +76,7 @@ editor_cmd = terminal .. " -e " .. editor
 -- user defined
 browser    = "firefox"
 browser2   = "iron"
-gui_editor = "gvim"
+gui_editor = terminal .. " -e /bin/zsh -i -c \"vim\""
 graphics   = "gimp"
 mail       = terminal .. " -e /bin/zsh -i -c \"mutt\" "
 iptraf     = terminal .. " -g 180x54-20+34 -e /bin/zsh -i -c \"sudo iptraf-ng -i all\" "
