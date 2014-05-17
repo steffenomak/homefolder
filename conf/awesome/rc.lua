@@ -49,8 +49,11 @@ function run_once(cmd)
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
 
-run_once("dropbox")
+run_once("dropboxd")
 run_once("skype")
+run_once("compton")
+awful.utils.spawn("pulseaudio --start")
+awful.utils.spawn("setxkbmap se")
 -- }}}
 
 -- {{{ Variable definitions
