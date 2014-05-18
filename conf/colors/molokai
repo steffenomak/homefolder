@@ -1,5 +1,5 @@
 ! Molokai theme
-URxvt*background: #101010
+URxvt*background: [90]#101010
 URxvt*foreground: #d0d0d0
 URxvt*color0: #101010
 URxvt*color1: #960050

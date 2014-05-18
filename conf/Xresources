@@ -3,8 +3,8 @@
 URxvt.imLocale: en_US.UTF-8
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-*.font:             xft:Envy Code R-9
-*.boldFont:         xft:Envy Code R-9
+*.font:             xft:Terminess Powerline-8
+*.boldFont:         xft:Terminess Powerline-8
 URxvt.inheritPixmap:    false
 URxvt.internalBorder:   0
 URxvt.loginShell:       true
@@ -18,8 +18,6 @@ URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
 URxvt.fading:               0
 
 URxvt.perl-ext-common: default
-
-URxvt.background:       [90]#002b36
 
 ! === Appearance =============================================================
 

@@ -47,6 +47,8 @@
 *pointerColorBackground:  S_base01
 *pointerColorForeground:  S_base1
 
+URxvt.background: [90]#002b36
+
 *color0:                  S_base02
 *color1:                  S_red
 *color2:                  S_green

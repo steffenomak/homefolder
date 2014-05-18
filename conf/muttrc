@@ -21,7 +21,7 @@ set imap_check_subscribed
 set hostname = gmail.com
 set mail_check = 5
 set timeout = 300
-set imap_keepalive = 500
+set imap_keepalive = 900
 set postponed = "+[Gmail]/Utkast"
 set record = "+[Gmail]/Skickade mail"
 set header_cache=~/.mutt/cache/headers
@@ -36,11 +36,16 @@ ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 hdr_order Date From To Cc
-alternative_order text/plain text/html
 auto_view text/html
+alternative_order text/plain text/enriched text/html
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
+
+# Abook
+set query_command = "abook --mutt-query '%s'"
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+bind editor        <Tab> complete-query
 
 # Palette for use with the Linux console.  Black background.
 
@@ -62,10 +67,6 @@ color index blue black "~N|~O"
 
 # color body brightwhite black '\*+[^*]+\*+'
 # color body brightwhite black '_+[^_]+_+'
-
-subscribe vala-list@gnome.org
-subscribe wayland-devel@lists.freedesktop.org
-
 set followup_to
 set honor_followup_to=yes
 
