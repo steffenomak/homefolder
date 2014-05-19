@@ -52,6 +52,7 @@ end
 run_once("dropboxd")
 run_once("skype")
 run_once("compton")
+run_once("unclutter")
 awful.util.spawn("pulseaudio --start")
 awful.util.spawn("setxkbmap se")
 -- }}}
