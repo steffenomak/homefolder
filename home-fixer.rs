@@ -68,11 +68,13 @@ impl Node {
 
     pub fn link(&self) -> bool {
         let st = self.exists();
+
         let questin = format!("{} exists, remove it [Y/n]: ", 
                               match self.link_location.filename_str() {
                                   Some(s) => s,
                                   None => fail!("WuuWt"),
                               });
+
         let ask = Node::ask(questin.as_slice());
 
         if !ask {

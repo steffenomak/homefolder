@@ -22,16 +22,13 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=$PATH:~/.gem/ruby/2.1.0/bin
-export DEVKITPSP=/opt/pspsdk
-export PATH=$PATH:$DEVKITPSP/bin
-export MANPATH=$MANPATH:$DEVKITPSP/share/man
-export PKG_CONFIG_PATH=~/.local/lib/pkgconfig:~/.local/share/pkgconfig
-export LD_LIBRARY_PATH=~/.local/lib
-export C_INCLUDE_PATH=~/.local/include
-export CPLUS_INCLUDE_PATH=~/.local/include
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/.local/lib/pkgconfig:~/.local/share/pkgconfig
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/.local/include
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/.local/include
 
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export DESKTOP_SESSION=gnome
+#export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+#export DESKTOP_SESSION=gnome
 
 function wname {
     echo -en "\033]0;$1\007"
@@ -56,34 +53,52 @@ alias vim='vim -p'
 
 export EDITOR='vim'
 
-u_1='┌─'
-u_2='└──▬'
-u_3='▬──▬'
-
-r_1='┌─'
-r_2='└──>'
-r_3='<──>'
-
-if [ `id -u` -eq "0" ]; then
-	i_1=${r_1}
-	i_2=${r_2}
-	i_3=${r_3}
-else
-	i_1=${u_1}
-	i_2=${u_2}
-	i_3=${u_3}
-fi
+#u_1='┌─'
+#u_2='└──▬'
+#u_3='▬──▬'
+#
+#r_1='┌─'
+#r_2='└──>'
+#r_3='<──>'
+#
+#if [ `id -u` -eq "0" ]; then
+#	i_1=${r_1}
+#	i_2=${r_2}
+#	i_3=${r_3}
+#else
+#	i_1=${u_1}
+#	i_2=${u_2}
+#	i_3=${u_3}
+#fi
 
 setopt PROMPT_SUBST
 
 
-PROMPT=${i_1}"[$fg[magenta]%n$reset_color@%m %c]
-${i_2} "
+#PROMPT=${i_1}"[$fg[magenta]%n$reset_color@%m %c]
+#${i_2} "
 
-PS2=${i_3}' '
+#PS2=${i_3}' '
+#
 
 zstyle ":completion:*:commands" rehash 1
 
 bindkey '^W' vi-backward-kill-word
 
+bindkey -v
 
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}$(git_custom_status) $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+export KEYTIMEOUT=1
