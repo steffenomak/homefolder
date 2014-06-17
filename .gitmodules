@@ -52,3 +52,9 @@
 [submodule "conf/base16-shell"]
 	path = conf/base16-shell
 	url = git@github.com:chriskempson/base16-shell.git
+[submodule "conf/zsh/zsh-git-prompt"]
+	path = conf/zsh/zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt.git
+[submodule "conf/zsh/git-prompt"]
+	path = conf/zsh/git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt.git
