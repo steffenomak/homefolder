@@ -4,7 +4,7 @@ use std::io::{BufferedReader, FilePermission, File, };
 use std::io::stdio::{stdin, flush, print, println};
 use std::os;
 
-#[deriving(Eq)]
+#[deriving(PartialEq)]
 enum FileStatus {
     Dir,
     File,
@@ -21,10 +21,10 @@ struct Node {
 }
 
 impl Node {
-    pub fn new_from_path(node_location: Path, link_locatino: Path) -> Node {
+    pub fn new_from_path(node_location: Path, link_location: Path) -> Node {
         Node {
             node_location: node_location,
-            link_location: link_locatino,
+            link_location: link_location,
         }
     }
 
@@ -68,8 +68,14 @@ impl Node {
 
     pub fn link(&self) -> bool {
         let st = self.exists();
-        let ask = Node::ask(format!("{} exists, remove it [Y/n]: ", 
-                                    self.link_location.filename_str().unwrap()));
+
+        let questin = format!("{} exists, remove it [Y/n]: ", 
+                              match self.link_location.filename_str() {
+                                  Some(s) => s,
+                                  None => fail!("WuuWt"),
+                              });
+
+        let ask = Node::ask(questin.as_slice());
 
         if !ask {
             return false;
@@ -117,8 +123,8 @@ impl Node {
 }
 
 struct Conf {
-    home: ~str,
-    conf_home: ~str,
+    home: String,
+    conf_home: String,
 }
 
 fn fix_path(path: &str, conf: &Conf) -> Path {
@@ -146,14 +152,14 @@ fn parse_file(file: File, conf: &Conf) -> Vec<Node> {
 
     for line in reader.lines() {
         let l = match line {
-            Ok(s) => s.trim_right_chars('\n').to_owned(),
+            Ok(s) => s.as_slice().trim_right_chars('\n').to_string(),
             Err(e) => {
                 println(e.desc);
                 break;
             },
         };
 
-        let clean_lines: Vec<&str> = l.split(' ').filter(|&a| {
+        let clean_lines: Vec<&str> = l.as_slice().split(' ').filter(|&a| {
             !a.is_whitespace()
         }).collect();
 
@@ -174,13 +180,12 @@ fn init_conf() -> Conf {
     let home_dir = os::homedir().unwrap();
 
     Conf{
-        home: home_dir.as_str().unwrap().to_owned(),
-        conf_home: conf_dir.as_str().unwrap().to_owned(),
+        home: home_dir.as_str().unwrap().to_string(),
+        conf_home: conf_dir.as_str().unwrap().to_string(),
     }
 }
 
 pub fn main() {
-
     let conf = init_conf();
 
     let file = File::open(&Path::new("./conf/config.conf")).unwrap();

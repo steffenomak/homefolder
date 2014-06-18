@@ -1,0 +1,7 @@
+set hintchars=hjklasdf
+noremap j 4j
+noremap k 4k
+noremap h 4h
+noremap l 4l
+nmap <S-j> :bp<CR>
+nmap <S-k> :bn<CR>
