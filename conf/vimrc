@@ -72,6 +72,7 @@ let g:tagbar_type_rust = {
             \ }
 
 nmap <F8> :TagbarToggle<CR>
+nmap <F9> :NERDTreeToggle<CR>
 nmap ,d :Bdelete<CR>
 nmap <F5> :make<CR>
 
@@ -87,3 +88,6 @@ else
     colorscheme base16-monokai
     hi Normal ctermbg=none
 endif
+
+map <C-K> :pyf /usr/share/clang/clang-format.py<CR>
+imap <C-K> <ESC>:pyf /usr/share/clang/clang-format.py<CR>i
