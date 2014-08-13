@@ -50,11 +50,11 @@ function run_once(cmd)
 end
 
 run_once("dropboxd")
-run_once("skype")
 run_once("compton")
 run_once("unclutter")
 awful.util.spawn("pulseaudio --start")
 awful.util.spawn("setxkbmap se")
+awful.util.spawn("nitrogen --restore")
 -- }}}
 
 -- {{{ Variable definitions
@@ -98,7 +98,7 @@ local layouts = {
 -- {{{ Tags
 tags = {
    names = { "1", "2", "3", "4", "5"},
-   layout = { layouts[6], layouts[8], layouts[7], layouts[1], layouts[4] }
+   layout = { layouts[6], layouts[8], layouts[8], layouts[1], layouts[4] }
 }
 
 for s = 1, screen.count() do
