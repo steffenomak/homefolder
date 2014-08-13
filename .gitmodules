@@ -58,3 +58,6 @@
 [submodule "conf/zsh/git-prompt"]
 	path = conf/zsh/git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt.git
+[submodule "conf/vim/bundle/vim-cpp-enhanced-highlight"]
+	path = conf/vim/bundle/vim-cpp-enhanced-highlight
+	url = http://github.com/octol/vim-cpp-enhanced-highlight.git
