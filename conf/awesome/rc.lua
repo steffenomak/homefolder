@@ -51,8 +51,13 @@ end
 
 run_once("dropboxd")
 run_once("skype")
-run_once("compton")
+
+
+
+run_once("compton -r 12 -o 0.75 -C --vsync opengl --unredir-if-possible --backend glx")
 run_once("unclutter")
+run_once("redshift -l 59.86:17.65")
+run_once("balooctl start")
 awful.util.spawn("pulseaudio --start")
 awful.util.spawn("setxkbmap se")
 -- }}}
