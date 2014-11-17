@@ -9,7 +9,8 @@ URxvt.depth:            32
 !*.font:             xft:Envy Code R for Powerline:pixelsize=12
 !*.boldFont:         xft:Envy Code R for Powerline:pixelsize=12
 
-URxvt.font:             xft:Droid Sans Mono Slashed:size=8
+!URxvt.font:             xft:Droid Sans Mono Slashed:size=8,xft:Envy Code R for powerline:size=8
+URxvt.font:             xft:Droid Sans Mono Slashed:size=8,xft:Droid Sans Mono for Powerline:size=8
 URxvt.boldFont:         xft:Droid Sans Mono Slashed:size=8
 
 ! Space betwean letters.
