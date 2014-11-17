@@ -13,58 +13,14 @@ zstyle :compinstall filename '/home/steffenomak/.zshrc'
 autoload -Uz compinit
 autoload -U colors && colors
 compinit -d $CACHEDIR/zcompdump
+
+zle -N zle-line-init
+zle -N zle-keymap-select
 # End of lines added by compinstall
 
-#export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export DEKSTOP=gnome
-export BROWSER=dwb
-
-source /home/steffenomak/.zsh/git-prompt/zshrc.sh
-
-BASE16_SCHEME="bespin"
-BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
-
-export PATH='/home/steffenomak/sat/bin:'$PATH
-export PATH=~/.local/bin:$PATH
-export PATH=$PATH:~/.gem/ruby/2.1.0/bin
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/.local/lib/pkgconfig:~/.local/share/pkgconfig
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
-export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/.local/include
-export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/.local/include
-export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
-
-function wname {
-    echo -en "\033]0;$1\007"
-}
-
-chpwd() {wname $PWD}
-precmd() {wname $PWD}
-
-alias ls='ls --color=auto'
-alias mc='mc -S $HOME/.mc-theme.ini'
-alias pacu='sudo pacman -Syu'
-alias pacs='pacman -Ss'
-alias paci='sudo pacman -S'
-alias pac='pacman'
-alias pacr='sudo pacman -R'
-alias pacrs='sudo pacman -Rs'
-alias mutt='wname mutt; mutt'
-alias ranger='wname ranger; ranger'
-alias transmission-remote-cli='wname transmission; transmission-remote-cli'
-alias todo='clear && gcalcli calm 1 && task'
-alias vim='vim -p'
-alias less='less -R'
-alias gits='git status'
-alias gita='git add'
-alias gitp='git push'
-alias gitb='git branch'
-alias gitc='git checkout'
-alias connman_dmenu='sudo connman_dmenu'
-alias matlab='matlab -desktop'
-
-export EDITOR='vim'
+    ################
+    # ZSH settings #
+    ################
 
 CACHEDIR="$HOME/.zsh/cache"
 
@@ -79,13 +35,19 @@ setopt PROMPT_SUBST
 
 zstyle ":completion:*:commands" rehash 1
 
-bindkey '^W' vi-backward-kill-word
-bindkey '^P' up-history
-bindkey '^N' down-history
-bindkey '^?' backward-delete-char
-bindkey '^h' backward-delete-char
-bindkey '^w' backward-kill-word
-bindkey '^r' history-incremental-search-backward
+source /home/steffenomak/.zsh/git-prompt/zshrc.sh
+
+BASE16_SCHEME="bespin"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+[[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
+
+    #############
+    # Functions #
+    #############
+
+function wname {
+    echo -en "\033]0;$1\007"
+}
 
 function zle-line-init zle-keymap-select {
     VIM_NORMAL="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
@@ -94,10 +56,77 @@ function zle-line-init zle-keymap-select {
     RPS1="${${KEYMAP/vicmd/$VIM_NORMAL}/(main|viins)/$VIM_INSERT}$(git_super_status) $EPS1"
     zle reset-prompt
 }
+
+    ###########
+    # Exports #
+    ###########
+export PATH='/home/steffenomak/sat/bin:'$PATH
+export PATH=~/.local/bin:$PATH
+export PATH=$PATH:~/.gem/ruby/2.1.0/bin
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/.local/lib/pkgconfig:~/.local/share/pkgconfig
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/.local/include
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/.local/include
+export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export DESKTOP_SESSION=gnome
+export DESKTOP=gnome
+export EDITOR='vim'
+export KEYTIMEOUT=1
+export BROWSER=dwb
+
+    ################
+    # Window title #
+    ################
+
+chpwd() {wname $PWD}
+precmd() {wname $PWD}
+
+    ###########
+    # Aliases #
+    ###########
+
+# Pacman
+alias pacu='sudo pacman -Syu'
+alias pacs='pacman -Ss'
+alias paci='sudo pacman -S'
+alias pac='pacman'
+alias pacr='sudo pacman -R'
+alias pacrs='sudo pacman -Rs'
+
+alias ls='ls --color=auto'
+alias mc='mc -S $HOME/.mc-theme.ini'
+alias mutt='wname mutt; mutt'
+alias ranger='wname ranger; ranger'
+alias transmission-remote-cli='wname transmission; transmission-remote-cli'
+alias todo='clear && gcalcli calm 1 && task'
+alias vim='vim -p'
+alias less='less -R'
+alias gits='git status'
+alias gita='git add'
+alias gitp='git push'
+alias gitb='git branch'
+alias gitc='git checkout'
+alias connman_dmenu='sudo connman_dmenu'
+alias matlab='matlab -desktop'
+
+    ############
+    # Keybinds #
+    ############
+
+bindkey '^W' vi-backward-kill-word
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey '^r' history-incremental-search-backward
+
+    ###################
+    # Prompt settings #
+    ###################
+
 PS1="┌─$fg[magenta]%n$reset_color@%m %c]
 └─:"
 PS2="──:"
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-export KEYTIMEOUT=1
