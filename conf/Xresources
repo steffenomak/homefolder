@@ -1,23 +1,31 @@
 #include "/home/steffenomak/.colors/current"
 
-URxvt.imLocale: en_US.UTF-8
-URxvt.cursorBlink:      true
-URxvt.depth:            32
+URxvt.imLocale:        en_US.UTF-8
+URxvt.cursorBlink:     true
+URxvt.depth:           32
 
-*.font:             xft:Dina-6
-*.boldFont:         xft:Dina-6
+!*.font:             xft:Dina-6
+!*.boldFont:         xft:Dina-6
+!URxvt.font:                 xft:Droid Sans Mono Slashed:size=8
+!URxvt.boldFont:             xft:Droid Sans Mono Slashed:size=8
 
-URxvt.inheritPixmap:    false
-URxvt.internalBorder:   0
-URxvt.loginShell:       true
-URxvt.mapAlert:         true
-URxvt.pointerBlank:     true
-URxvt.resource:         value
+URxvt.font:            xft:Fira Mono:size=8
+URxvt.boldFont:        xft:Fira Mono:size=8
+
+URxvt.letterSpace:     -1
+
+
+URxvt.inheritPixmap:   false
+URxvt.internalBorder:  0
+URxvt.loginShell:      true
+URxvt.mapAlert:        true
+URxvt.pointerBlank:    true
+URxvt.resource:        value
 !URxvt.termName:         rxvt-256color
-URxvt.transparent:      true
-URxvt.urgentOnBell:     true
-URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
-URxvt.fading:               0
+URxvt.transparent:     true
+URxvt.urgentOnBell:    true
+URxvt.iconFile:        /usr/share/icons/Faenza/apps/scalable/terminal.svg
+URxvt.fading:          0
 
 URxvt.perl-ext-common: default
 

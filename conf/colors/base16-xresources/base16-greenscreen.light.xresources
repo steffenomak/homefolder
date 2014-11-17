@@ -1,26 +1,26 @@
-! Base16 Bespin
-! Scheme: Jan T. Sott
+! Base16 Green Screen
+! Scheme: Chris Kempson (http://chriskempson.com)
 
-#define base00 #28211c
-#define base01 #36312e
-#define base02 #5e5d5c
-#define base03 #666666
-#define base04 #797977
-#define base05 #8a8986
-#define base06 #9d9b97
-#define base07 #baae9e
-#define base08 #cf6a4c
-#define base09 #cf7d34
-#define base0A #f9ee98
-#define base0B #54be0d
-#define base0C #afc4db
-#define base0D #5ea6ea
-#define base0E #9b859d
-#define base0F #937121
+#define base00 #001100
+#define base01 #003300
+#define base02 #005500
+#define base03 #007700
+#define base04 #009900
+#define base05 #00bb00
+#define base06 #00dd00
+#define base07 #00ff00
+#define base08 #007700
+#define base09 #009900
+#define base0A #007700
+#define base0B #00bb00
+#define base0C #005500
+#define base0D #009900
+#define base0E #00bb00
+#define base0F #005500
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
 
 *.color0:       base00
 *.color1:       base08

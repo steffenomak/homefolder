@@ -15,12 +15,13 @@ autoload -U colors && colors
 compinit -d $CACHEDIR/zcompdump
 # End of lines added by compinstall
 
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
-export DESKTOP_SESSION=gnome
+#export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+export DEKSTOP=gnome
+export BROWSER=dwb
 
 source /home/steffenomak/.zsh/git-prompt/zshrc.sh
 
-BASE16_SCHEME="monokai"
+BASE16_SCHEME="bespin"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 
@@ -31,6 +32,8 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/.local/lib/pkgconfig:~/.local/share/pk
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/.local/include
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/.local/include
+export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 
 function wname {
     echo -en "\033]0;$1\007"
@@ -58,6 +61,8 @@ alias gita='git add'
 alias gitp='git push'
 alias gitb='git branch'
 alias gitc='git checkout'
+alias connman_dmenu='sudo connman_dmenu'
+alias matlab='matlab -desktop'
 
 export EDITOR='vim'
 

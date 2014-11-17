@@ -1,26 +1,26 @@
-! Base16 Bespin
-! Scheme: Jan T. Sott
+! Base16 Atelier Heath
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/heath)
 
-#define base00 #28211c
-#define base01 #36312e
-#define base02 #5e5d5c
-#define base03 #666666
-#define base04 #797977
-#define base05 #8a8986
-#define base06 #9d9b97
-#define base07 #baae9e
-#define base08 #cf6a4c
-#define base09 #cf7d34
-#define base0A #f9ee98
-#define base0B #54be0d
-#define base0C #afc4db
-#define base0D #5ea6ea
-#define base0E #9b859d
-#define base0F #937121
+#define base00 #1b181b
+#define base01 #292329
+#define base02 #695d69
+#define base03 #776977
+#define base04 #9e8f9e
+#define base05 #ab9bab
+#define base06 #d8cad8
+#define base07 #f7f3f7
+#define base08 #ca402b
+#define base09 #a65926
+#define base0A #bb8a35
+#define base0B #379a37
+#define base0C #159393
+#define base0D #516aec
+#define base0E #7b59c0
+#define base0F #cc33cc
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
 
 *.color0:       base00
 *.color1:       base08

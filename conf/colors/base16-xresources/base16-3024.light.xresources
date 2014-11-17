@@ -1,26 +1,26 @@
-! Base16 Bespin
-! Scheme: Jan T. Sott
+! Base16 3024
+! Scheme: Jan T. Sott (http://github.com/idleberg)
 
-#define base00 #28211c
-#define base01 #36312e
-#define base02 #5e5d5c
-#define base03 #666666
-#define base04 #797977
-#define base05 #8a8986
-#define base06 #9d9b97
-#define base07 #baae9e
-#define base08 #cf6a4c
-#define base09 #cf7d34
-#define base0A #f9ee98
-#define base0B #54be0d
-#define base0C #afc4db
-#define base0D #5ea6ea
-#define base0E #9b859d
-#define base0F #937121
+#define base00 #090300
+#define base01 #3a3432
+#define base02 #4a4543
+#define base03 #5c5855
+#define base04 #807d7c
+#define base05 #a5a2a2
+#define base06 #d6d5d4
+#define base07 #f7f7f7
+#define base08 #db2d20
+#define base09 #e8bbd0
+#define base0A #fded02
+#define base0B #01a252
+#define base0C #b5e4f4
+#define base0D #01a0e4
+#define base0E #a16a94
+#define base0F #cdab53
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
 
 *.color0:       base00
 *.color1:       base08

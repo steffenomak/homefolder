@@ -1,26 +1,26 @@
-! Base16 Bespin
-! Scheme: Jan T. Sott
+! Base16 Atelier Seaside
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/seaside/)
 
-#define base00 #28211c
-#define base01 #36312e
-#define base02 #5e5d5c
-#define base03 #666666
-#define base04 #797977
-#define base05 #8a8986
-#define base06 #9d9b97
-#define base07 #baae9e
-#define base08 #cf6a4c
-#define base09 #cf7d34
-#define base0A #f9ee98
-#define base0B #54be0d
-#define base0C #afc4db
-#define base0D #5ea6ea
-#define base0E #9b859d
-#define base0F #937121
+#define base00 #131513
+#define base01 #242924
+#define base02 #5e6e5e
+#define base03 #687d68
+#define base04 #809980
+#define base05 #8ca68c
+#define base06 #cfe8cf
+#define base07 #f0fff0
+#define base08 #e6193c
+#define base09 #87711d
+#define base0A #c3c322
+#define base0B #29a329
+#define base0C #1999b3
+#define base0D #3d62f5
+#define base0E #ad2bee
+#define base0F #e619c3
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
 
 *.color0:       base00
 *.color1:       base08

@@ -4,14 +4,12 @@ syntax enable
 set nocompatible
 filetype off
 
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
-set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -24,9 +22,17 @@ set nobackup
 set nowritebackup
 set ttimeoutlen=50
 set laststatus=2
+
+set smartindent
 set cino+=(0
 set cino+=:0
 set cino+=g0
+set cino+=N-s
+set cino+=b1
+set cino+=g1
+set cino+=h3
+set cino+=(0,W4
+
 set autoread
 set ruler
 set cursorline
@@ -49,6 +55,9 @@ Bundle 'SirVer/ultisnips'
 Bundle 'honza/vim-snippets'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'terryma/vim-multiple-cursors'
+Bundle 'godlygeek/tabular'
+Bundle 'dhruvasagar/vim-table-mode'
+Bundle 'vim-scripts/DrawIt'
 
 let $PYTHONPATH="/usr/lib/python3.4/site-packages"
 let g:airline_powerline_fonts = 1
@@ -70,6 +79,7 @@ let g:tagbar_type_rust = {
             \ 'M:macros'
             \ ]
             \ }
+let mapleader=" "
 
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
@@ -78,16 +88,15 @@ nmap <F5> :make<CR>
 
 filetype plugin indent on
 
-let g:ycm_autoclose_preview_window_after_completion = 1
+"let g:ycm_autoclose_preview_window_after_completion = 1
 
 if &term=~'linux'
 else
     let g:solarized_termtrans=1
     set background=dark
     let base16colorspace=256
-    colorscheme base16-monokai
+    colorscheme base16-bespin
     hi Normal ctermbg=none
 endif
 
-map <C-K> :pyf /usr/share/clang/clang-format.py<CR>
-imap <C-K> <ESC>:pyf /usr/share/clang/clang-format.py<CR>i
+autocmd BufWritePre * :%s/\s\+$//e
