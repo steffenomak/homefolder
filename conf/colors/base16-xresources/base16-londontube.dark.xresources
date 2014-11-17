@@ -1,22 +1,22 @@
-! Base16 Bespin
+! Base16 London Tube
 ! Scheme: Jan T. Sott
 
-#define base00 #28211c
-#define base01 #36312e
-#define base02 #5e5d5c
-#define base03 #666666
-#define base04 #797977
-#define base05 #8a8986
-#define base06 #9d9b97
-#define base07 #baae9e
-#define base08 #cf6a4c
-#define base09 #cf7d34
-#define base0A #f9ee98
-#define base0B #54be0d
-#define base0C #afc4db
-#define base0D #5ea6ea
-#define base0E #9b859d
-#define base0F #937121
+#define base00 #231f20
+#define base01 #1c3f95
+#define base02 #5a5758
+#define base03 #737171
+#define base04 #959ca1
+#define base05 #d9d8d8
+#define base06 #e7e7e8
+#define base07 #ffffff
+#define base08 #ee2e24
+#define base09 #f386a1
+#define base0A #ffd204
+#define base0B #00853e
+#define base0C #85cebc
+#define base0D #009ddc
+#define base0E #98005d
+#define base0F #b06110
 
 *.foreground:   base05
 *.background:   base00

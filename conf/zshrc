@@ -37,7 +37,7 @@ zstyle ":completion:*:commands" rehash 1
 
 source /home/steffenomak/.zsh/git-prompt/zshrc.sh
 
-BASE16_SCHEME="monokai"
+BASE16_SCHEME="bespin"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 
@@ -60,7 +60,6 @@ function zle-line-init zle-keymap-select {
     ###########
     # Exports #
     ###########
-
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=$PATH:~/.gem/ruby/2.1.0/bin
@@ -68,10 +67,14 @@ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/.local/lib/pkgconfig:~/.local/share/pk
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/.local/include
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/.local/include
+export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 export DESKTOP_SESSION=gnome
+export DESKTOP=gnome
 export EDITOR='vim'
 export KEYTIMEOUT=1
+export BROWSER=dwb
 
     ################
     # Window title #
@@ -100,6 +103,13 @@ alias transmission-remote-cli='wname transmission; transmission-remote-cli'
 alias todo='clear && gcalcli calm 1 && task'
 alias vim='vim -p'
 alias less='less -R'
+alias gits='git status'
+alias gita='git add'
+alias gitp='git push'
+alias gitb='git branch'
+alias gitc='git checkout'
+alias connman_dmenu='sudo connman_dmenu'
+alias matlab='matlab -desktop'
 
     ############
     # Keybinds #

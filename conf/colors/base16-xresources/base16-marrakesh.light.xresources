@@ -1,26 +1,26 @@
-! Base16 Bespin
-! Scheme: Jan T. Sott
+! Base16 Marrakesh
+! Scheme: Alexandre Gavioli (http://github.com/Alexx2/)
 
-#define base00 #28211c
-#define base01 #36312e
-#define base02 #5e5d5c
-#define base03 #666666
-#define base04 #797977
-#define base05 #8a8986
-#define base06 #9d9b97
-#define base07 #baae9e
-#define base08 #cf6a4c
-#define base09 #cf7d34
-#define base0A #f9ee98
-#define base0B #54be0d
-#define base0C #afc4db
-#define base0D #5ea6ea
-#define base0E #9b859d
-#define base0F #937121
+#define base00 #201602
+#define base01 #302e00
+#define base02 #5f5b17
+#define base03 #6c6823
+#define base04 #86813b
+#define base05 #948e48
+#define base06 #ccc37a
+#define base07 #faf0a5
+#define base08 #c35359
+#define base09 #b36144
+#define base0A #a88339
+#define base0B #18974e
+#define base0C #75a738
+#define base0D #477ca1
+#define base0E #8868b3
+#define base0F #b3588e
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
 
 *.color0:       base00
 *.color1:       base08

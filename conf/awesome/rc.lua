@@ -1,8 +1,8 @@
 --[[
-                                             
-     Powerarrow Darker Awesome WM config 2.0 
-     github.com/copycat-killer               
-                                             
+
+     Powerarrow Darker Awesome WM config 2.0
+     github.com/copycat-killer
+
 --]]
 
 -- {{{ Required libraries
@@ -50,16 +50,14 @@ function run_once(cmd)
 end
 
 run_once("dropboxd")
-run_once("skype")
-
-
-
 run_once("compton -r 12 -o 0.75 -C --vsync opengl --unredir-if-possible --backend glx")
 run_once("unclutter")
 run_once("redshift -l 59.86:17.65")
 run_once("balooctl start")
 awful.util.spawn("pulseaudio --start")
 awful.util.spawn("setxkbmap se")
+awful.util.spawn("nitrogen --restore")
+awful.util.spawn("xmodmap ~/.config/awesome/speedswapper")
 -- }}}
 
 -- {{{ Variable definitions
@@ -75,13 +73,13 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-darker/t
 -- common
 modkey     = "Mod4"
 altkey     = "Mod1"
-terminal   = "urxvt"
+terminal   = "st"
 editor     = os.getenv("EDITOR") or "nano" or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
-browser    = "firefox"
-browser2   = "iron"
+browser    = "dwb"
+browser2   = "google-chrome-unstable"
 gui_editor = terminal .. " -e /bin/zsh -i -c \"vim\""
 graphics   = "gimp"
 mail       = terminal .. " -e /bin/zsh -i -c \"mutt\" "
@@ -103,7 +101,7 @@ local layouts = {
 -- {{{ Tags
 tags = {
    names = { "1", "2", "3", "4", "5"},
-   layout = { layouts[6], layouts[8], layouts[7], layouts[1], layouts[4] }
+   layout = { layouts[8], layouts[8], layouts[8], layouts[8], layouts[1] }
 }
 
 for s = 1, screen.count() do
@@ -557,7 +555,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "q", function () awful.util.spawn(browser) end),
     awful.key({ modkey }, "i", function () awful.util.spawn(browser2) end),
     awful.key({ modkey }, "s", function () awful.util.spawn(gui_editor) end),
-    awful.key({ modkey }, "g", function () awful.util.spawn(graphics) end),
 
     -- Prompt
     awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
@@ -659,9 +656,6 @@ awful.rules.rules = {
 
     { rule = { class = "MPlayer" },
           properties = { floating = true } },
-
-    { rule = { class = "Dwb" },
-          properties = { tag = tags[1][1] } },
 
     { rule = { class = "Iron" },
           properties = { tag = tags[1][1] } },

@@ -23,10 +23,10 @@ URxvt.mapAlert:         true
 URxvt.pointerBlank:     true
 URxvt.resource:         value
 !URxvt.termName:         rxvt-256color
-URxvt.transparent:      true
-URxvt.urgentOnBell:     true
-URxvt.iconFile: /usr/share/icons/Faenza/apps/scalable/terminal.svg
-URxvt.fading:               0
+URxvt.transparent:     true
+URxvt.urgentOnBell:    true
+URxvt.iconFile:        /usr/share/icons/Faenza/apps/scalable/terminal.svg
+URxvt.fading:          0
 
 URxvt.perl-ext-common: default
 

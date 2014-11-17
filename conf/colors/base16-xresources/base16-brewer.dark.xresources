@@ -1,22 +1,22 @@
-! Base16 Bespin
-! Scheme: Jan T. Sott
+! Base16 Brewer
+! Scheme: Timothée Poisot (http://github.com/tpoisot)
 
-#define base00 #28211c
-#define base01 #36312e
-#define base02 #5e5d5c
-#define base03 #666666
-#define base04 #797977
-#define base05 #8a8986
-#define base06 #9d9b97
-#define base07 #baae9e
-#define base08 #cf6a4c
-#define base09 #cf7d34
-#define base0A #f9ee98
-#define base0B #54be0d
-#define base0C #afc4db
-#define base0D #5ea6ea
-#define base0E #9b859d
-#define base0F #937121
+#define base00 #0c0d0e
+#define base01 #2e2f30
+#define base02 #515253
+#define base03 #737475
+#define base04 #959697
+#define base05 #b7b8b9
+#define base06 #dadbdc
+#define base07 #fcfdfe
+#define base08 #e31a1c
+#define base09 #e6550d
+#define base0A #dca060
+#define base0B #31a354
+#define base0C #80b1d3
+#define base0D #3182bd
+#define base0E #756bb1
+#define base0F #b15928
 
 *.foreground:   base05
 *.background:   base00
