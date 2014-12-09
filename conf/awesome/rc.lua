@@ -73,13 +73,13 @@ beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-darker/t
 -- common
 modkey     = "Mod4"
 altkey     = "Mod1"
-terminal   = "st"
+terminal   = "urxvt"
 editor     = os.getenv("EDITOR") or "nano" or "vi"
 editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
 browser    = "dwb"
-browser2   = "google-chrome-unstable"
+browser2   = "google-chrome-stable"
 gui_editor = terminal .. " -e /bin/zsh -i -c \"vim\""
 graphics   = "gimp"
 mail       = terminal .. " -e /bin/zsh -i -c \"mutt\" "
