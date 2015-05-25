@@ -1,54 +1,3 @@
-[submodule "conf/vim/bundle/vundle"]
-	path = conf/vim/bundle/vundle
-	url = https://github.com/gmarik/vundle.git
-[submodule "conf/vim/bundle/rust.vim"]
-	path = conf/vim/bundle/rust.vim
-	url = https://github.com/wting/rust.vim
-[submodule "conf/vim/bundle/ag.vim"]
-	path = conf/vim/bundle/ag.vim
-	url = https://github.com/vim-scripts/ag.vim
-[submodule "conf/vim/bundle/glsl.vim"]
-	path = conf/vim/bundle/glsl.vim
-	url = https://github.com/vim-scripts/glsl.vim
-[submodule "conf/vim/bundle/vim-airline"]
-	path = conf/vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline.git
-[submodule "conf/vim/bundle/vim-fugitive"]
-	path = conf/vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "conf/vim/bundle/tagbar"]
-	path = conf/vim/bundle/tagbar
-	url = https://github.com/majutsushi/tagbar.git
-[submodule "conf/vim/bundle/nerdtree"]
-	path = conf/vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "conf/vim/bundle/vim-easy-align"]
-	path = conf/vim/bundle/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align.git
-[submodule "conf/vim/bundle/YouCompleteMe"]
-	path = conf/vim/bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "conf/vim/bundle/vim-bbye"]
-	path = conf/vim/bundle/vim-bbye
-	url = https://github.com/moll/vim-bbye.git
-[submodule "conf/vim/bundle/vim-colors-solarized"]
-	path = conf/vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-[submodule "conf/vim/bundle/ultisnips"]
-	path = conf/vim/bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "conf/vim/bundle/vim-snippets"]
-	path = conf/vim/bundle/vim-snippets
-	url = https://github.com/honza/vim-snippets.git
-[submodule "conf/vim/bundle/vim-multiple-cursors"]
-	path = conf/vim/bundle/vim-multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
-[submodule "conf/vim/bundle/NrrwRgn"]
-	path = conf/vim/bundle/NrrwRgn
-	url = https://github.com/chrisbra/NrrwRgn.git
-[submodule "conf/vim/bundle/base16-vim"]
-	path = conf/vim/bundle/base16-vim
-	url = https://github.com/chriskempson/base16-vim.git
 [submodule "conf/base16-shell"]
 	path = conf/base16-shell
 	url = git@github.com:chriskempson/base16-shell.git
@@ -58,6 +7,40 @@
 [submodule "conf/zsh/git-prompt"]
 	path = conf/zsh/git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt.git
-[submodule "conf/vim/bundle/vim-cpp-enhanced-highlight"]
-	path = conf/vim/bundle/vim-cpp-enhanced-highlight
-	url = http://github.com/octol/vim-cpp-enhanced-highlight.git
+
+[submodule "conf/vim/base16-vim"]
+    path = conf/vim/bundle/base16-vim
+    url = https://github.com/chriskempson/base16-vim
+[submodule "conf/vim/vim-airline"]
+    path = conf/vim/bundle/vim-airline
+    url = https://github.com/bling/vim-airline
+[submodule "conf/vim/vim-fugitive"]
+    path = conf/vim/bundle/vim-fugitive
+    url = https://github.com/tpope/vim-fugitive
+[submodule "conf/vim/tagbar"]
+    path = conf/vim/bundle/tagbar
+    url = https://github.com/majutsushi/tagbar
+[submodule "conf/vim/nerdtree"]
+    path = conf/vim/bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree
+[submodule "conf/vim/vim-bbye"]
+    path = conf/vim/bundle/vim-bbye
+    url = https://github.com/moll/vim-bbye
+[submodule "conf/vim/vim-snippets"]
+    path = conf/vim/bundle/vim-snippets
+    url = https://github.com/honza/vim-snippets
+[submodule "conf/vim/NrrwRgn"]
+    path = conf/vim/bundle/NrrwRgn
+    url = https://github.com/chrisbra/NrrwRgn
+[submodule "conf/vim/vim-multiple-cursors"]
+    path = conf/vim/bundle/vim-multiple-cursors
+    url = https://github.com/terryma/vim-multiple-cursors
+[submodule "conf/vim/ctrlp"]
+    path = conf/vim/bundle/ctrlp
+    url = https://github.com/kien/ctrlp.vim
+[submodule "conf/vim/tabular"]
+    path = conf/vim/bundle/tabular
+    url = https://github.com/godlygeek/tabular
+[submodule "conf/vim/sytastic"]
+    path = conf/vim/bundle/sytastic
+    url = https://github.com/scrooloose/sytastic
