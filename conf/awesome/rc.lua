@@ -53,11 +53,9 @@ run_once("dropboxd")
 run_once("compton -r 12 -o 0.75 -C --vsync opengl --unredir-if-possible --backend glx")
 run_once("unclutter")
 run_once("redshift -l 59.86:17.65")
-run_once("balooctl start")
 awful.util.spawn("pulseaudio --start")
 awful.util.spawn("setxkbmap se")
 awful.util.spawn("nitrogen --restore")
-awful.util.spawn("xmodmap ~/.config/awesome/speedswapper")
 -- }}}
 
 -- {{{ Variable definitions
@@ -79,7 +77,7 @@ editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
 browser    = "dwb"
-browser2   = "google-chrome-stable"
+browser2   = "chromium"
 gui_editor = terminal .. " -e /bin/zsh -i -c \"vim\""
 graphics   = "gimp"
 mail       = terminal .. " -e /bin/zsh -i -c \"mutt\" "

@@ -37,7 +37,7 @@ zstyle ":completion:*:commands" rehash 1
 
 source /home/steffenomak/.zsh/git-prompt/zshrc.sh
 
-BASE16_SCHEME="bespin"
+BASE16_SCHEME="monokai"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 [[ -s $BASE16_SHELL ]] && . $BASE16_SHELL
 
@@ -61,8 +61,8 @@ function zle-line-init zle-keymap-select {
     # Exports #
     ###########
 export PATH='/home/steffenomak/sat/bin:'$PATH
-export PATH=~/.local/bin:$PATH
-export PATH=$PATH:~/.gem/ruby/2.1.0/bin
+export PATH=$HOME/.cabal/bin:~/.local/bin:$PATH
+export PATH=$PATH:~/.gem/ruby/2.1.0/bin:
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/.local/lib/pkgconfig:~/.local/share/pkgconfig
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/.local/include
@@ -75,6 +75,8 @@ export DESKTOP=gnome
 export EDITOR='vim'
 export KEYTIMEOUT=1
 export BROWSER=dwb
+
+export NIX_REMOTE=daemon
 
     ################
     # Window title #

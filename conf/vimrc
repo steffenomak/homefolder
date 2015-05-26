@@ -4,8 +4,8 @@ syntax enable
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+execute pathogen#infect()
+filetype plugin indent on
 
 set guioptions-=m
 set guioptions-=T
@@ -37,30 +37,6 @@ set autoread
 set ruler
 set cursorline
 
-Bundle 'gmarik/vundle'
-
-Bundle 'chriskempson/base16-vim'
-Bundle 'vim-scripts/glsl.vim'
-Bundle 'wting/rust.vim'
-Bundle 'vim-scripts/ag.vim'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/nerdtree'
-Bundle 'junegunn/vim-easy-align'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'moll/vim-bbye'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'chrisbra/NrrwRgn'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'kien/ctrlp.vim'
-Bundle 'godlygeek/tabular'
-Bundle 'dhruvasagar/vim-table-mode'
-Bundle 'vim-scripts/DrawIt'
-
 let $PYTHONPATH="/usr/lib/python3.4/site-packages"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -91,7 +67,6 @@ nmap <F5> :make<CR>
 nnoremap t <C-]>
 nnoremap <leader>. :CtrlPTag<CR>
 
-filetype plugin indent on
 
 "let g:ycm_autoclose_preview_window_after_completion = 1
 
@@ -105,3 +80,49 @@ if has('gui_running')
 endif
 
 autocmd BufWritePre * :%s/\s\+$//e
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
+
+let g:syntastic_haskell_hdevtools_args = '-g-Wall'
+
+let g:tagbar_type_haskell = {
+    \ 'ctagsbin'  : 'hasktags',
+    \ 'ctagsargs' : '-x -c -o-',
+    \ 'kinds'     : [
+        \  'm:modules:0:1',
+        \  'd:data: 0:1',
+        \  'd_gadt: data gadt:0:1',
+        \  't:type names:0:1',
+        \  'nt:new types:0:1',
+        \  'c:classes:0:1',
+        \  'cons:constructors:1:1',
+        \  'c_gadt:constructor gadt:1:1',
+        \  'c_a:constructor accessors:1:1',
+        \  'ft:function types:1:1',
+        \  'fi:function implementations:0:1',
+        \  'o:others:0:1'
+    \ ],
+    \ 'sro'        : '.',
+    \ 'kind2scope' : {
+        \ 'm' : 'module',
+        \ 'c' : 'class',
+        \ 'd' : 'data',
+        \ 't' : 'type'
+    \ },
+    \ 'scope2kind' : {
+        \ 'module' : 'm',
+        \ 'class'  : 'c',
+        \ 'data'   : 'd',
+        \ 'type'   : 't'
+    \ }
+\ }

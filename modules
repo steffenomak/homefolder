@@ -44,12 +44,3 @@
 [submodule "conf/vim/sytastic"]
     path = conf/vim/bundle/sytastic
     url = https://github.com/scrooloose/sytastic
-[submodule "conf/vim/bundle/syntastic"]
-	path = conf/vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-[submodule "conf/vim/bundle/vim-hdevtools"]
-	path = conf/vim/bundle/vim-hdevtools
-	url = https://github.com/bitc/vim-hdevtools.git
-[submodule "conf/vim/bundle/vim-syntax-shakespeare"]
-	path = conf/vim/bundle/vim-syntax-shakespeare
-	url = http://github.com/pbrisbin/vim-syntax-shakespeare
