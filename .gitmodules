@@ -11,9 +11,6 @@
 [submodule "conf/vim/base16-vim"]
     path = conf/vim/bundle/base16-vim
     url = https://github.com/chriskempson/base16-vim
-[submodule "conf/vim/vim-airline"]
-    path = conf/vim/bundle/vim-airline
-    url = https://github.com/bling/vim-airline
 [submodule "conf/vim/vim-fugitive"]
     path = conf/vim/bundle/vim-fugitive
     url = https://github.com/tpope/vim-fugitive
@@ -53,3 +50,18 @@
 [submodule "conf/vim/bundle/vim-syntax-shakespeare"]
 	path = conf/vim/bundle/vim-syntax-shakespeare
 	url = http://github.com/pbrisbin/vim-syntax-shakespeare
+[submodule "conf/vim/bundle/ctrlp.vim"]
+	path = conf/vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "conf/vim/bundle/vim-coffee-script"]
+	path = conf/vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script
+[submodule "conf/vim/bundle/vim-css3-syntax"]
+	path = conf/vim/bundle/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax.git
+[submodule "conf/vim/bundle/vim-surround"]
+	path = conf/vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule "conf/vim/bundle/vim-buffergator"]
+	path = conf/vim/bundle/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator
