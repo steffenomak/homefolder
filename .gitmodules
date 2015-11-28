@@ -65,3 +65,6 @@
 [submodule "conf/vim/bundle/vim-buffergator"]
 	path = conf/vim/bundle/vim-buffergator
 	url = https://github.com/jeetsukumaran/vim-buffergator
+[submodule "conf/vim/bundle/vim-nix"]
+	path = conf/vim/bundle/vim-nix
+	url = git@github.com:LnL7/vim-nix
