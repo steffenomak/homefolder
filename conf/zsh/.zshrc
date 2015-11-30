@@ -1,1 +1,0 @@
-/home/steffenomak/repos/my_github_repos/homefolder/conf/zshrc
