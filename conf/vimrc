@@ -15,7 +15,6 @@ set shiftwidth=4
 set expandtab
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-set nowrap
 set ttyfast
 set nocompatible
 set nobackup
