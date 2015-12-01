@@ -15,7 +15,6 @@ set shiftwidth=4
 set expandtab
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
-set nowrap
 set ttyfast
 set nocompatible
 set nobackup
@@ -61,7 +60,11 @@ let base16colorspace=256
 colorscheme base16-monokai
 hi Normal ctermbg=none
 if has('gui_running')
-    set guifont=Fira\ Mono\ OT\ 9
+    set guifont=Ubuntu\ Mono\ 10
+    set guioptions-=m "remove menu bar
+    set guioptions-=T "remove toolbar
+    set guioptions-=r "remove right-hand scroll bar
+    set guioptions-=L "remove left-hand scroll bar
 endif
 
 autocmd BufWritePre * :%s/\s\+$//e

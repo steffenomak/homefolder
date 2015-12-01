@@ -3,4 +3,5 @@ make_symlinks
 conf/ranger/bookmarks
 conf/ranger/history
 home-fixer
+conf/zsh/cache
 
