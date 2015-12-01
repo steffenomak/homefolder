@@ -3,15 +3,9 @@
 URxvt.imLocale: en_US.UTF-8
 URxvt.cursorBlink:      true
 URxvt.depth:            32
-!*.font:             xft:Terminess Powerline-8
-!*.boldFont:         xft:Terminess Powerline-8
 
-!*.font:             xft:Envy Code R for Powerline:pixelsize=12
-!*.boldFont:         xft:Envy Code R for Powerline:pixelsize=12
-
-!URxvt.font:             xft:Droid Sans Mono Slashed:size=8,xft:Envy Code R for powerline:size=8
-URxvt.font:             xft:Droid Sans Mono Slashed:size=8,xft:Droid Sans Mono for Powerline:size=8
-URxvt.boldFont:         xft:Droid Sans Mono Slashed:size=8
+URxvt.font: xft:Ubuntu Mono:size=8
+URxvt.boldFont: xft:Ubuntu Mono:bold:size=8
 
 ! Space betwean letters.
 URxvt.letterSpace:      -1
@@ -29,6 +23,12 @@ URxvt.iconFile:        /usr/share/icons/Faenza/apps/scalable/terminal.svg
 URxvt.fading:          0
 
 URxvt.perl-ext-common: default
+
+! === Xft Settings =============================================================
+Xft.antialias: true
+Xft.rgb: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfill
 
 ! === Appearance =============================================================
 
