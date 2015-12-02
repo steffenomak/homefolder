@@ -50,7 +50,7 @@ let mapleader=" "
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :NERDTreeToggle<CR>
 nmap ,d :Bdelete<CR>
-nmap <leader>b :make<CR>
+"nmap <leader>b :make<CR>
 nnoremap t <C-]>
 nnoremap <leader>. :CtrlPTag<CR>
 

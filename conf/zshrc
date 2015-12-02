@@ -103,6 +103,7 @@ alias pac='pacman'
 alias pacr='sudo pacman -R'
 alias pacrs='sudo pacman -Rs'
 alias e='emacs -nw'
+alias nixc='nix-shell --command'
 
 alias ls='ls --color=auto'
 alias mc='mc -S $HOME/.mc-theme.ini'
