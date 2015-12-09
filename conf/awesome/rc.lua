@@ -78,7 +78,7 @@ editor_cmd = terminal .. " -e " .. editor
 
 -- user defined
 browser    = "dwb"
-browser2   = "chromium"
+browser2   = "firefox"
 gui_editor = terminal .. " -e /bin/zsh -i -c \"vim\""
 graphics   = "gimp"
 mail       = terminal .. " -e /bin/zsh -i -c \"mutt\" "
