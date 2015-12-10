@@ -32,6 +32,10 @@ set include
 set sort = 'threads'
 set sort_aux = 'reverse-last-date-received'
 set auto_tag = yes
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
