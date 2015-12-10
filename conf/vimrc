@@ -7,9 +7,6 @@ filetype off
 execute pathogen#infect()
 filetype plugin indent on
 
-set guioptions-=m
-set guioptions-=T
-set guioptions-=r
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -57,7 +54,7 @@ nnoremap <leader>. :CtrlPTag<CR>
 let g:solarized_termtrans=1
 set background=dark
 let base16colorspace=256
-colorscheme base16-monokai
+colorscheme base16-railscasts
 hi Normal ctermbg=none
 if has('gui_running')
     set guifont=Ubuntu\ Mono\ 10
