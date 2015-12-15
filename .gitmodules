@@ -69,7 +69,7 @@
 	url = https://github.com/raichoo/purescript-vim
 [submodule "conf/vim/bundle/vimux"]
 	path = conf/vim/bundle/vimux
-	url = git@github.com:benmills/vimux
+	url = https://github.com/benmills/vimux
 [submodule "conf/zsh/zsh-git-prompt"]
 	path = conf/zsh/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt
