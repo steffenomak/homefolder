@@ -1,13 +1,6 @@
 [submodule "conf/base16-shell"]
 	path = conf/base16-shell
 	url = git@github.com:chriskempson/base16-shell.git
-[submodule "conf/zsh/zsh-git-prompt"]
-	path = conf/zsh/zsh-git-prompt
-	url = git@github.com:olivierverdier/zsh-git-prompt.git
-[submodule "conf/zsh/git-prompt"]
-	path = conf/zsh/git-prompt
-	url = git@github.com:olivierverdier/zsh-git-prompt.git
-
 [submodule "conf/vim/base16-vim"]
     path = conf/vim/bundle/base16-vim
     url = https://github.com/chriskempson/base16-vim
@@ -74,3 +67,9 @@
 [submodule "conf/vim/bundle/purescript-vim"]
 	path = conf/vim/bundle/purescript-vim
 	url = https://github.com/raichoo/purescript-vim
+[submodule "conf/vim/bundle/vimux"]
+	path = conf/vim/bundle/vimux
+	url = git@github.com:benmills/vimux
+[submodule "conf/zsh/zsh-git-prompt"]
+	path = conf/zsh/zsh-git-prompt
+	url = git@github.com:oliververdier/zsh-git-prompt
