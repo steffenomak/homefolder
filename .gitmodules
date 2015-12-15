@@ -72,4 +72,4 @@
 	url = git@github.com:benmills/vimux
 [submodule "conf/zsh/zsh-git-prompt"]
 	path = conf/zsh/zsh-git-prompt
-	url = git@github.com:oliververdier/zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt
