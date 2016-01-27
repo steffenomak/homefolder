@@ -138,6 +138,6 @@ bindkey '^r' history-incremental-search-backward
     # Prompt settings #
     ###################
 
-PS1="┌─$fg[magenta]%n$reset_color@%m %c]
+PS1="┌─$fg[green]%n$reset_color@%m %c]
 └─:"
 PS2="──:"
