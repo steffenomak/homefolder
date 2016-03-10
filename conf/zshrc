@@ -63,15 +63,11 @@ function zle-line-init zle-keymap-select {
 export PATH='/home/steffenomak/sat/bin:'$PATH
 export PATH=$HOME/.cabal/bin:~/.local/bin:$PATH
 export PATH=$PATH:~/.gem/ruby/2.1.0/bin:
-export LOCALE_ARCHIVE=$HOME/.nix-profile/lib/locale/locale-archive
 
 export ELM_HOME=/usr/lib/node_modules/elm/share
 
-export PATH=$HOME/.nix-profile/bin:$PATH
-export NIX_PATH=$HOME/.nix-defexpr/channels
 
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:~/.local/lib/pkgconfig:~/.local/share/pkgconfig
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.nix-profile/lib
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:~/.local/include
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:~/.local/include
 export INFINALITY_FT_FILTER_PARAMS="16 20 28 20 16"
@@ -81,8 +77,6 @@ export DESKTOP=gnome
 export EDITOR='vim'
 export KEYTIMEOUT=1
 export BROWSER=dwb
-
-export NIX_REMOTE=daemon
 
     ################
     # Window title #
@@ -103,8 +97,6 @@ alias pac='pacman'
 alias pacr='sudo pacman -R'
 alias pacrs='sudo pacman -Rs'
 alias e='emacs -nw'
-alias nixc='nix-shell --command'
-alias nixr='nix-shell --run'
 
 alias ls='ls --color=auto'
 alias mc='mc -S $HOME/.mc-theme.ini'

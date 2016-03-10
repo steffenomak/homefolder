@@ -120,4 +120,3 @@ map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>cc :VimuxRunCommand("nixr \"cabal configure\"")<CR>
 map <Leader>cb :VimuxRunCommand("cabal build")<CR>
 map <Leader>cr :VimuxPromptCommand("cabal run ")<CR>
-
