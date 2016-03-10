@@ -49,14 +49,6 @@ function run_once(cmd)
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
 
-run_once("dropboxd")
-run_once("compton -r 12 -o 0.75 -C --vsync opengl --unredir-if-possible --backend glx")
-run_once("unclutter")
-run_once("redshift -l 59.86:17.65")
-run_once("nm-applet")
-awful.util.spawn("pulseaudio --start")
-awful.util.spawn("setxkbmap se")
-awful.util.spawn("nitrogen --restore")
 -- }}}
 
 -- {{{ Variable definitions

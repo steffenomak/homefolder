@@ -73,3 +73,6 @@
 [submodule "conf/zsh/zsh-git-prompt"]
 	path = conf/zsh/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt
+[submodule "conf/vim/bundle/glsl.vim"]
+	path = conf/vim/bundle/glsl.vim
+	url = https://github.com/beyondmarc/glsl.vim
