@@ -68,7 +68,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 set statusline=line:\%l\ col:\%c
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
@@ -79,7 +79,6 @@ let g:syntastic_check_on_wq = 0
 au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
 au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
 
-let g:syntastic_haskell_hdevtools_args = '-g-Wall'
 
 let g:tagbar_type_haskell = {
     \ 'ctagsbin'  : 'hasktags',
@@ -117,6 +116,6 @@ let g:tagbar_type_haskell = {
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vq :VimuxCloseRunner<CR>
 
-map <Leader>cc :VimuxRunCommand("nixr \"cabal configure\"")<CR>
-map <Leader>cb :VimuxRunCommand("cabal build")<CR>
-map <Leader>cr :VimuxPromptCommand("cabal run ")<CR>
+"map <Leader>cc :VimuxRunCommand("nixr \"cabal configure\"")<CR>
+"map <Leader>cb :VimuxRunCommand("cabal build")<CR>
+"map <Leader>cr :VimuxPromptCommand("cabal run ")<CR>

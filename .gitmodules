@@ -76,3 +76,9 @@
 [submodule "conf/vim/bundle/glsl.vim"]
 	path = conf/vim/bundle/glsl.vim
 	url = https://github.com/beyondmarc/glsl.vim
+[submodule "conf/vim/bundle/YouCompleteMe"]
+	path = conf/vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "conf/vim/bundle/kotlin-vim"]
+	path = conf/vim/bundle/kotlin-vim
+	url = https://github.com/udalov/kotlin-vim

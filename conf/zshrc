@@ -11,6 +11,7 @@ bindkey -v
 zstyle :compinstall filename '/home/steffenomak/.zshrc'
 
 autoload -Uz compinit
+autoload -U +X bashcompinit && bashcompinit
 autoload -U colors && colors
 compinit -d $CACHEDIR/zcompdump
 
@@ -133,3 +134,6 @@ bindkey '^r' history-incremental-search-backward
 PS1="┌─$fg[green]%n$reset_color@%m %c]
 └─:"
 PS2="──:"
+
+#source /usr/local/etc/profile.d/nix.sh
+eval "$(stack --bash-completion-script stack)"
